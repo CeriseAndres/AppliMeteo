@@ -2,9 +2,65 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link href='' rel='stylesheet' type='text/css'>
-        <title></title>
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link href='css/style.css' rel='stylesheet' type='text/css'>
+        <title>Site Meteo</title>
     </head>
     <body>
+        <header>
+            <nav class="topNavbar">
+                <ul>
+                    <li><a href="#">Login</a>
+                        <form class="loginForm" method="post" action="">
+                            <label>Utilisateur</label>
+                            <input type="text" name="user" placeholder="Votre identifiant">
+                            <label>Mot de passe</label>
+                            <input type="password" name="password" placeholder="Votre mot de passe">
+                            <input type="submit" value="OK">
+                        </form>
+                    </li>
+                    <li><a href="#">Déconnection</a></li>
+                    <li><a href="#">Paramètres</a></li>
+                </ul>
+            </nav>
+            <div class="headerContent">
+                <div class="headerLogo"><a><img src=''></a></div>
+                <div class="HeaderTitle"><h1>Site Meteo</h1></div>
+            </div>
+        </header>
+        
+        <section class="container">
+            <div class="row"> 
+                <div class="col-xs-12"></div> 
+                <div class="col-sm-7"></div> 
+                <div class="col-sm-5"></div> 
+                <div class="col-sm-12 col-md-4"></div>
+                <div class="col-sm-6 col-md-4"></div>
+                <div class="col-sm-6 col-md-4"></div>
+            </div>
+        </section>
+        
+        <footer>
+            <div class="footerHead">
+                <div class="footerLogo"><img src=""></div>
+                <div class="footerTitle"><h3>Site Meteo</h3></div>
+            </div>
+            <div class="footerContent">
+                <div class="footerColumn1"></div>
+                <div class="footerColumn2"></div>
+                <div class="footerColumn3"></div>
+            </div>
+            <div class="footerFooter">
+                <nav class="menuFooter">
+                    <ul>
+                        <li><a href="">Mentions légales</a></li>
+                        <li><a href="">Plan du site</a></li>
+                        <li><a href="">Aide</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </body>
 </html>
