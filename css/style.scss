@@ -1,3 +1,4 @@
+//
 $navbarsColor : #05f;
 $navBorderColor : #ccf;
 $lightFontsColor : #ccf;
@@ -8,11 +9,21 @@ $buttonsBrRadius : 5px;
 $paddingButtons: 8px;
 $hoverButtonsColor: #77f;
 $generalBgColor : #eef;
-
+//
 $colorBlue_1: #00557f;
 $colorBlue_2: #00aa7f;
-
+//
 $contentWidth : 90%;
+//variables login Content
+$white: #ffffff;
+$colorBlue_2-light: lighten($colorBlue_2, 10%);
+$colorBlue_2-dark: darken($colorBlue_2, 20%);
+$gray-light: #a0b3b0;
+$gray: #ddd;
+$thin: 300;
+$normal: 400;
+$bold: 600;
+$br: 4px;
 
 buttons, input[type="submit"], #geoLocButton {
     border-radius: $buttonsBrRadius;
@@ -230,4 +241,50 @@ footer {
 			}
 		}
 	}
+}
+
+/*Login page*/
+.form {
+    background:rgba($colorBlue_1,.9);
+    padding: 40px;
+    max-width:600px;
+    margin:40px auto;
+    border-radius:$br;
+    box-shadow:0 4px 10px 4px rgba($colorBlue_1,.2);
+
+    a {
+        text-decoration:none;
+        color:$colorBlue_2;
+        transition:.5s ease;
+        &:hover {
+            color:$colorBlue_2-dark;
+        }
+    }
+    .tab_group {
+        list-style:none;
+        padding:0;
+        margin:0 0 40px 0;
+        &:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        li a {
+            display:block;
+            text-decoration:none;
+            padding:15px;
+            background:rgba($gray-light,.25);
+            color:$gray-light;
+            font-size:20px;
+            float:left;
+            width:50%;
+            text-align:center;
+            cursor:pointer;
+            transition:.5s ease;
+            &:hover {
+            background:$colorBlue_2-light;
+            color:$white;
+            }
+        }
+    }
 }
