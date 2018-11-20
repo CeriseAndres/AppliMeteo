@@ -4,6 +4,24 @@ $lightFontsColor : #ccf;
 $darkFontsColor : #32324c;
 $formsColor : #ccf;
 $buttonsColor : #7bf;
+$buttonsBrRadius : 5px;
+$paddingButtons: 8px;
+$hoverButtonsColor: #77f;
+$generalBgColor : #eef;
+
+buttons, input[type="submit"], #geoLocButton {
+    border-radius: $buttonsBrRadius;
+    background-color: $buttonsColor;
+    color: $darkFontsColor;
+    padding: $paddingButtons;
+    border: none;
+    cursor: pointer;
+}
+buttons:hover, 
+input[type="submit"]:hover, 
+#geoLocButton:hover {
+    background-color: $hoverButtonsColor;
+}
 
 * {
     box-sizing: border-box;
@@ -80,19 +98,29 @@ $buttonsColor : #7bf;
     
 }
 
-
-
+/*conteneur principal page*/
 section.container {
-    border: solid black;
+    background-color : $generalBgColor;
 }
 
 /*formulaire recherche sur carte*/
+.searchMap {
+    overflow: hidden;
+}
 
 .searchMapForm {
+
     .searchMapOptionsForm {
         background-color: $formsColor;
+        padding: 20px;
+        display: flex;
+        flex-direction:column;
+        justify-content: space-around;
+        height: 100%;
+        
         label, input {
             display: block;
+            width: 100%;
         }
         .dataTypeSearchCont {
             display: block;
@@ -106,16 +134,14 @@ section.container {
             
         }
         .searchGeolocCont {
-            padding: 20px;
+            display: flex;
+            justify-content: space-around;
 
             img {
                 width: 50px;
             }
             #geoLocButton {
-                display: inline-block;
-                background-color: $buttonsColor;
-                color: $darkFontsColor;
-                padding: 10px;
+                display: block;
             }
         }
     }

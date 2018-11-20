@@ -1,4 +1,19 @@
 @charset "UTF-8";
+buttons, input[type=submit], #geoLocButton {
+  border-radius: 5px;
+  background-color: #7bf;
+  color: #32324c;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+buttons:hover,
+input[type=submit]:hover,
+#geoLocButton:hover {
+  background-color: #77f;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -61,31 +76,40 @@
   margin: 20px;
 }
 
+/*conteneur principal page*/
 section.container {
-  border: solid black;
+  background-color: #eef;
 }
 
 /*formulaire recherche sur carte*/
+.searchMap {
+  overflow: hidden;
+}
+
 .searchMapForm .searchMapOptionsForm {
   background-color: #ccf;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
 }
 .searchMapForm .searchMapOptionsForm label, .searchMapForm .searchMapOptionsForm input {
   display: block;
+  width: 100%;
 }
 .searchMapForm .searchMapOptionsForm .dataTypeSearchCont {
   display: block;
 }
 .searchMapForm .searchMapOptionsForm .searchGeolocCont {
-  padding: 20px;
+  display: flex;
+  justify-content: space-around;
 }
 .searchMapForm .searchMapOptionsForm .searchGeolocCont img {
   width: 50px;
 }
 .searchMapForm .searchMapOptionsForm .searchGeolocCont #geoLocButton {
-  display: inline-block;
-  background-color: #7bf;
-  color: #32324c;
-  padding: 10px;
+  display: block;
 }
 
 /*# sourceMappingURL=stylePierre.css.map */
