@@ -18,6 +18,10 @@ input[type=submit]:hover,
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+}
+
 /*header*/
 .topNavbar {
   position: relative;
@@ -84,13 +88,30 @@ input[type=submit]:hover,
 }
 
 /*conteneur principal page*/
-section.container {
+.container {
   background-color: #eef;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 30px 30px 100px 30px;
 }
 
 section .contentSearch {
   display: flex;
   padding-bottom: 20px;
+}
+
+.contentSearch {
+  display: flex;
+}
+.contentSearch .tab_wrapper {
+  display: flex;
+}
+
+.searchMapCont {
+  display: flex;
+  margin: 40px auto;
+  width: 90%;
+  justify-content: space-between;
 }
 
 /*formulaire recherche sur carte*/
@@ -136,7 +157,6 @@ footer .footerContent {
   justify-content: center;
 }
 footer .footerContent .footer {
-  border: solid;
   margin: 20px;
   flex: 30%;
   height: 200px;
@@ -162,4 +182,4 @@ footer .footerFooter ul li a {
   text-decoration: none;
 }
 
-/*# sourceMappingURL=stylePierre.css.map */
+/*# sourceMappingURL=style.css.map */

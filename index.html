@@ -2,8 +2,7 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <link href='css/stylePierre.css' rel='stylesheet' type='text/css'>
+        <link href='css/style.css' rel='stylesheet' type='text/css'>
         <title>Magic Meteo</title>
     </head>
     <body>
@@ -31,9 +30,9 @@
             </div>
         </header>
         <section class="container">
-            <div class="row"> 
+            <div class="contentPage"> 
 <!--                recherche simple-->
-                    <div class="tab_result col-md-12"> 
+
                         <div class="contentSearch">
                             <form>
                                 <div class="input-group">
@@ -43,8 +42,8 @@
                                     </div>
                                 </div>
                             </form>
-                            <div class="tab_wrapper card-group"> 
-                                <div class="card border-dark">
+                            <div class="tab_wrapper"> 
+                                <div class="tab">
                                     <h6 class="card-title">LUNDI</h6>
                                     <img class="card-img-top" src="img/icons8-soleil-128.png" alt="Card image cap">
                                     <div class="card-body">
@@ -54,7 +53,7 @@
                                         <small class="text-muted"></small>
                                     </div>
                                 </div>
-                                <div class="card border-dark">
+                                <div class="tab">
                                     <h6 class="card-title">MARDI</h6>
                                     <img class="card-img-top" src="img/icons8-journée-partiellement-nuageuse-128.png" alt="Card image cap">
                                     <div class="card-body">
@@ -64,7 +63,7 @@
                                         <small class="text-muted"></small>
                                     </div>
                                 </div>
-                                <div class="card border-dark">
+                                <div class="tab">
                                     <h6 class="card-title">MERCREDI</h6>
                                     <img class="card-img-top" src="img/icons8-soleil-128.png" alt="Card image cap">
                                     <div class="card-body">
@@ -75,7 +74,7 @@
                                         <small class="text-muted"></small>
                                     </div>
                                 </div>
-                                <div class="card border-dark">
+                                <div class="tab">
                                     <h6 class="card-title">JEUDI</h6>
                                     <img class="card-img-top" src="img/icons8-temps-venteux-100.png" alt="Card image cap">
                                     <div class="card-body">
@@ -86,7 +85,7 @@
                                         <small class="text-muted"></small>
                                     </div>
                                 </div>
-                                <div class="card border-dark">
+                                <div class="tab">
                                     <h6 class="card-title">VENDREDI</h6>
                                     <img class="card-img-top" src="img/icons8-neige-128.png" alt="Card image cap">
                                     <div class="card-body">
@@ -97,7 +96,7 @@
                                         <small class="text-muted"></small>
                                     </div>
                                 </div>
-                                <div class="card border-dark">
+                                <div class="tab">
                                     <h6 class="card-title">SAMEDI</h6>
                                     <img class="card-img-top" src="img/icons8-neige-128.png" alt="Card image cap">
                                     <div class="card-body">
@@ -108,7 +107,7 @@
                                         <small class="text-muted"></small>
                                     </div>
                                 </div>
-                                <div class="card border-dark">
+                                <div class="tab">
                                     <h6 class="card-title">DIMANCHE</h6>
                                     <img class="card-img-top" src="img/icons8-orage-128.png" alt="Card image cap">
                                     <div class="card-body">
@@ -121,51 +120,54 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
                 
 <!--                recherche sur carte-->
-                <div class="col-sm-7 searchMap">
-                    <div id='canvasParent'></div>
+                <div class="searchMapCont">
+                    <div class="searchMap">
+                        <div id='canvasParent'></div>
+                    </div>
+
+                    <div class="searchMapForm">
+                        <form class="searchMapOptionsForm">
+
+                            <div class="dataTypeSearchCont">
+                                <label for="dataTypeOptions">Type de données recherchées</label>
+                                <select id="dataTypeOptions">
+                                    <option>Températures</option>
+                                    <option>Vent</option>
+                                    <option>Pluie</option>
+                                    <option>UV</option>
+                                    <option>Alertes</option>
+                                </select>
+                            </div>
+
+                            <div class="searchCityCont">
+                                <label for="searchCityVal">Recherche par ville/code postal/nom du lieu</label>
+                                <input id="searchCityVal" type="text" name="searchCityVal" placeholder="Ville, code postal, nom">
+                            </div>
+
+                            <div class="searchRegionCont">
+                                <label for="searchRegionVal">Recherche par région</label>
+                                <input id="searchRegionVal" type="text" name="searchRegionVal">
+                            </div>
+
+                            <div class="searchGeolocCont">
+                                <img alt="icone geolocalisation" src='img/picto-geoloc.png'>
+                                <span id="geoLocButton">Activer géolocalisation</span>
+                            </div>
+                            <div class="submitCont">
+                                <input type="submit" value="Go">
+                            </div>
+                        </form>
+                    </div> 
                 </div>
+
                 
-                <div class="col-sm-5 searchMapForm">
-                    <form class="searchMapOptionsForm">
-                        
-                        <div class="dataTypeSearchCont">
-                            <label for="dataTypeOptions">Type de données recherchées</label>
-                            <select id="dataTypeOptions">
-                                <option>Températures</option>
-                                <option>Vent</option>
-                                <option>Pluie</option>
-                                <option>UV</option>
-                                <option>Alertes</option>
-                            </select>
-                        </div>
-                        
-                        <div class="searchCityCont">
-                            <label for="searchCityVal">Recherche par ville/code postal/nom du lieu</label>
-                            <input id="searchCityVal" type="text" name="searchCityVal" placeholder="Ville, code postal, nom">
-                        </div>
-                        
-                        <div class="searchRegionCont">
-                            <label for="searchRegionVal">Recherche par région</label>
-                            <input id="searchRegionVal" type="text" name="searchRegionVal">
-                        </div>
-                        
-                        <div class="searchGeolocCont">
-                            <img alt="icone geolocalisation" src='img/picto-geoloc.png'>
-                            <span id="geoLocButton">Activer géolocalisation</span>
-                        </div>
-                        <div class="submitCont">
-                            <input type="submit" value="Go">
-                        </div>
-                    </form>
-                </div> 
+<!--                Actualités-->
+                <div class=""></div>
+                <div class=""></div>
+                <div class=""></div>
                 
-                
-                <div class="col-sm-12 col-md-4"></div>
-                <div class="col-sm-6 col-md-4"></div>
-                <div class="col-sm-6 col-md-4"></div>
             </div>
         </section>
         
@@ -197,8 +199,7 @@
 
 
         </footer>
-        
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    
         <script type="text/javascript" src="js/script.js"></script>
     </body>
 </html>

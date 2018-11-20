@@ -12,6 +12,8 @@ $generalBgColor : #eef;
 $colorBlue_1: #00557f;
 $colorBlue_2: #00aa7f;
 
+$contentWidth : 90%;
+
 buttons, input[type="submit"], #geoLocButton {
     border-radius: $buttonsBrRadius;
     background-color: $buttonsColor;
@@ -29,7 +31,9 @@ input[type="submit"]:hover,
 * {
     box-sizing: border-box;
 }
-
+body {
+    margin: 0;
+}
 /*header*/
 .topNavbar{
     position: relative;
@@ -110,13 +114,29 @@ input[type="submit"]:hover,
 }
 
 /*conteneur principal page*/
-section.container {
+.container {
     background-color : $generalBgColor;
+    width : 1200px;
+    margin: 0 auto;
+    padding: 30px 30px 100px 30px;
 }
 section .contentSearch {
     display: flex;
     padding-bottom: 20px;
 }
+.contentSearch {
+    display: flex;
+    .tab_wrapper {
+        display: flex;
+    }
+}
+.searchMapCont {
+    display: flex;
+    margin: 40px auto;
+    width: $contentWidth;
+    justify-content: space-between;
+}
+
 
 /*formulaire recherche sur carte*/
 .searchMap {
@@ -178,7 +198,6 @@ footer {
 		justify-content: center;
 
 		.footer {
-			border: solid;
 			margin: 20px;
 			
 			flex: 30%;
