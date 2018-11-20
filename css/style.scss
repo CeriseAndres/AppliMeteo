@@ -17,9 +17,17 @@ $hoverButtonsColor: #36edbe;
 /*fond body*/
 $generalBgColor : #eef;
 
+/*palette couleurs*/
 $colorBlue_1: #00557f;
 $colorBlue_2: #00aa7f;
 $colorOrange_1: #bc7d00;
+$colorBlue_2-light: lighten($colorBlue_2, 10%);
+$colorBlue_2-dark: darken($colorBlue_2, 20%);
+$colorOrange_1-light: lighten($colorOrange_1, 20%);
+$colorOrange_1-dark: darken($colorOrange_1, 20%);
+$white: #ffffff;
+$gray-light: #a0b3b0;
+$gray: #ddd;
 
 /*formatage du contenu*/
 $contentWidth : 90%;
@@ -27,18 +35,14 @@ $boxShadows : 2px 2px 10px #0003;
 $boxBrRadius : 8px;
 
 $contentWidth : 90%;
-//variables login Content
-$white: #ffffff;
-$colorBlue_2-light: lighten($colorBlue_2, 10%);
-$colorBlue_2-dark: darken($colorBlue_2, 20%);
-$colorOrange_1-light: lighten($colorOrange_1, 20%);
-$colorOrange_1-dark: darken($colorOrange_1, 20%);
-$gray-light: #a0b3b0;
-$gray: #ddd;
+
+/*variables login Content*/
 $thin: 300;
 $normal: 400;
 $bold: 600;
 $br: 4px;
+
+
 
 buttons, input[type="submit"], #geoLocButton {
     border-radius: $buttonsBrRadius;
@@ -321,6 +325,7 @@ footer {
 
 /*Login page*/
 .form {
+    /*design form*/
     background:rgba($colorBlue_1,.9);
     padding: 40px;
     max-width:600px;
@@ -374,11 +379,12 @@ footer {
         margin:0 0 40px;
     }
 }
-.tab-content > div:last-child {
+
+.tab_content > div:last-child {
   display:none;
 }
 
-.field-wrap {
+.field_wrap {
     position:relative;
     margin-bottom:40px;
     label {
@@ -429,3 +435,45 @@ textarea {
   border:2px solid $gray-light;
   resize: vertical;
 }
+
+.top_row {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  > div {
+    float:left;
+    width:48%;
+    margin-right:4%;
+    &:last-child { 
+      margin:0;
+    }
+  }
+}
+/*Design boutons*/
+.button {
+  border:0;
+  outline:none;
+  border-radius:$br;
+  padding:15px 0;
+  font-size:1rem;
+  font-weight:$bold;
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  background:$colorBlue_2;
+  color:$white;
+  transition:all.5s ease;
+  -webkit-appearance: none;
+  cursor:pointer;
+  &:hover, &:focus {
+    background:$colorBlue_2-dark;
+  }
+}
+.button_block {
+  display:block;
+  width:100%;
+}
+
+
