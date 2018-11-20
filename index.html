@@ -3,64 +3,166 @@
     <head>
         <meta charset="utf-8">
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        
         <link href='css/style.css' rel='stylesheet' type='text/css'>
+        <link href='css/styleCerise.css' rel='stylesheet' type='text/css'>
+
         <title>Site Meteo</title>
     </head>
     <body>
-        <header>
-            <nav class="topNavbar">
-                <ul>
-                    <li><a href="#">Login</a>
-                        <form class="loginForm" method="post" action="">
-                            <label>Utilisateur</label>
-                            <input type="text" name="user" placeholder="Votre identifiant">
-                            <label>Mot de passe</label>
-                            <input type="password" name="password" placeholder="Votre mot de passe">
-                            <input type="submit" value="OK">
-                        </form>
-                    </li>
-                    <li><a href="#">Déconnection</a></li>
-                    <li><a href="#">Paramètres</a></li>
-                </ul>
-            </nav>
-            <div class="headerContent">
-                <div class="headerLogo"><a><img src=''></a></div>
-                <div class="HeaderTitle"><h1>Site Meteo</h1></div>
-            </div>
-        </header>
-        
-        <section class="container">
-            <div class="row"> 
-                <div class="col-xs-12"></div> 
-                <div class="col-sm-7"></div> 
-                <div class="col-sm-5"></div> 
-                <div class="col-sm-12 col-md-4"></div>
-                <div class="col-sm-6 col-md-4"></div>
-                <div class="col-sm-6 col-md-4"></div>
-            </div>
-        </section>
-        
-        <footer>
-            <div class="footerHead">
-                <div class="footerLogo"><img src=""></div>
-                <div class="footerTitle"><h3>Site Meteo</h3></div>
-            </div>
-            <div class="footerContent">
-                <div class="footerColumn1"></div>
-                <div class="footerColumn2"></div>
-                <div class="footerColumn3"></div>
-            </div>
-            <div class="footerFooter">
-                <nav class="menuFooter">
+        <div class="container">
+            <header>
+                <nav class="topNavbar">
                     <ul>
-                        <li><a href="">Mentions légales</a></li>
-                        <li><a href="">Plan du site</a></li>
-                        <li><a href="">Aide</a></li>
-                        <li><a href="">Contact</a></li>
+                        <li><a href="#">Login</a>
+                            <form class="loginForm" method="post" action="">
+                                <label>Utilisateur</label>
+                                <input type="text" name="user" placeholder="Votre identifiant">
+                                <label>Mot de passe</label>
+                                <input type="password" name="password" placeholder="Votre mot de passe">
+                                <input type="submit" value="OK">
+                            </form>
+                        </li>
+                        <li><a href="#">Mon espace</a></li>
+                        <li><a href="#">Paramètres</a></li>
+                        <li><a href="#">Déconnection</a></li>
+                        
                     </ul>
                 </nav>
-            </div>
-        </footer>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+                <div class="headerContent">
+                    <div class="headerLogo"><a><img src=''></a></div>
+                    <div class="HeaderTitle"><h1>Site Meteo</h1></div>
+                </div>
+            </header>
+            
+            <section class="container">
+                <div class="row"> 
+                    <div class="tab_result col-sm-10 col-md-12 col-lg-12"> 
+                        <div class="contentSearch">
+                            <form>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Ville, Code Postal, ..." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <input class="btn btn-sm" type="submit" value="check">
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="tab_wrapper card-group"> 
+                                <div class="card border-dark">
+                                    <h6 class="card-title">LUNDI</h6>
+                                    <img class="card-img-top" src="img/icons8-soleil-128.png"" alt="Card image cap">
+                                    <div class="card-body">
+                                        <p class="card-text"></p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-muted"></small>
+                                    </div>
+                                </div>
+                                <div class="card border-dark">
+                                    <h6 class="card-title">MARDI</h6>
+                                    <img class="card-img-top" src="img/icons8-journée-partiellement-nuageuse-128.png" alt="Card image cap">
+                                    <div class="card-body">
+                                        <p class="card-text"></p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-muted"></small>
+                                    </div>
+                                </div>
+                                <div class="card border-dark">
+                                    <h6 class="card-title">MERCREDI</h6>
+                                    <img class="card-img-top" src="img/icons8-soleil-128.png" alt="Card image cap">
+                                    <div class="card-body">
+                                        
+                                        <p class="card-text"></p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-muted"></small>
+                                    </div>
+                                </div>
+                                <div class="card border-dark">
+                                    <h6 class="card-title">JEUDI</h6>
+                                    <img class="card-img-top" src="img/icons8-temps-venteux-100.png" alt="Card image cap">
+                                    <div class="card-body">
+                                        
+                                        <p class="card-text"></p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-muted"></small>
+                                    </div>
+                                </div>
+                                <div class="card border-dark">
+                                    <h6 class="card-title">VENDREDI</h6>
+                                    <img class="card-img-top" src="img/icons8-neige-128.png" alt="Card image cap">
+                                    <div class="card-body">
+                                        
+                                        <p class="card-text"></p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-muted"></small>
+                                    </div>
+                                </div>
+                                <div class="card border-dark">
+                                    <h6 class="card-title">SAMEDI</h6>
+                                    <img class="card-img-top" src="img/icons8-neige-128.png" alt="Card image cap">
+                                    <div class="card-body">
+                                        
+                                        <p class="card-text"></p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-muted"></small>
+                                    </div>
+                                </div>
+                                <div class="card border-dark">
+                                    <h6 class="card-title">DIMANCHE</h6>
+                                    <img class="card-img-top" src="img/icons8-orage-128.png" alt="Card image cap">
+                                    <div class="card-body">
+                                        
+                                        <p class="card-text"></p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <small class="text-muted"></small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="col-sm-7"></div> 
+                    <div class="col-sm-5"></div> 
+                    <div class="col-sm-12 col-md-4"></div>
+                    <div class="col-sm-6 col-md-4"></div>
+                    <div class="col-sm-6 col-md-4"></div>
+                </div>
+            </section>
+            
+            <footer>
+               
+                <div class="footerHead">    
+                        
+                    <div class="footerLogo"><img src=""></div>
+                    <div class="footerTitle"><h3>Site Meteo</h3></div>
+                </div>
+                 
+                <div class="footerContent">
+                    <div class="footer"></div>
+                    <div class="footer"></div>
+                    <div class="footer"></div>
+                </div>
+                
+                
+                <div class="footerFooter">
+                    <nav class="menuFooter">
+                        <ul>
+                            <li><a href="">Mentions légales</a></li>
+                            <li><a href="">Plan du site</a></li>
+                            <li><a href="">Aide</a></li>
+                            <li><a href="">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+              
+                
+            </footer>
+            <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        </div>
     </body>
 </html>

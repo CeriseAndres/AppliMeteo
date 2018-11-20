@@ -3,26 +3,20 @@
 }
 
 body {
-  width: 900px;
+  background-color: white;
+  width: 80%;
   /*Largeur max*/
-  margin: auto;
+}
+
+section {
   background-color: #00aa7f;
-  padding: 0;
 }
-
-.contentSearch {
-  display: flex;
-  padding-bottom: 20px;
-}
-
-.tab_wrapper {
-  text-align: center;
-}
-
 footer {
+  display: block;
   background-color: #00557f;
   border-radius: 20px;
   padding: 10px 10px 0 10px;
+  width: 100%;
 }
 footer .footerContent {
   display: flex;
@@ -34,6 +28,11 @@ footer .footerContent .footer {
   flex: 30%;
   height: 200px;
   background-color: #00aa7f;
+}
+@media (max-width: 600px) {
+  footer .footerContent {
+    flex-direction: column;
+  }
 }
 footer .footerFooter {
   display: flex;
@@ -50,4 +49,4 @@ footer .footerFooter ul li a {
   text-decoration: none;
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=styleCerise.css.map */
