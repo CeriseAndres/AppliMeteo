@@ -4,6 +4,7 @@ myBody.style.backgroundImage = "url('img/lluvia-animada.gif')";
 myBody.style.backgroundSize = "cover";
 let canvasParent = document.getElementById('canvasParent');
 let ctx;
+let mouseIsDown = false;
 
 
 /*Classes MapArea et Map pour créer l'objet carte et son conteneur (canvas)*/
@@ -47,10 +48,11 @@ class Map {
         ctx.drawImage(this.mapImage, this.x, this.y, this.width, this.height);
     }
     move() {
-        
+        this.x += moveX;
+        this.y += moveY;
+        this.update();
     }
 }
-
 
 /*fonctions de mise à jour de l'affichage pour pouvoir afficher la map et rafraichir son affichage si l'utilisateur la déplace*/
 function updateMap() {
@@ -59,10 +61,30 @@ function updateMap() {
 
 window.onload = function() {
     myMapArea.init();
+    console.log(myMap.moveX);
 }
 
+function dragMap(e) {
+    if (mouseIsDown) {
+        myMap.moveX = e.clientX;
+        myMap.moveY = e.clientY;
+        myMap.move();
+    }
+
+}
+window.onmousedown = function() {
+    mouseIsDown = true;
+}
+window.onmouseup = function() {
+    mouseIsDown = false;
+}
+
+
+
 let myMapArea = new MapArea(500, 500, canvasParent);
-let myMap = new Map(-50, -50, 1911, 1781, "img/carte-detaillee-france.jpg");
+let myMap = new Map(-200, -200, 1911, 1781, "img/carte-detaillee-france.jpg");
+canvasParent.addEventListener("mousemove", dragMap);
 
 myMap.update();
+console.log(myMap.moveX);
 
