@@ -1,5 +1,5 @@
 /*navbars*/
-$navbarsColor : #05f;
+$navbarsColor : #00557f;
 $navBorderColor : #ccf;
 
 /*polices*/
@@ -8,10 +8,10 @@ $darkFontsColor : #32324c;
 $formsColor : #ccf;
 
 /*boutons*/
-$buttonsColor : #7bf;
+$buttonsColor : #00aa7f;
 $buttonsBrRadius : 5px;
 $paddingButtons: 8px;
-$hoverButtonsColor: #77f;
+$hoverButtonsColor: #36edbe;
 
 /*fond body*/
 $generalBgColor : #eef;
@@ -40,19 +40,20 @@ input[type="submit"]:hover,
 
 * {
     box-sizing: border-box;
+    font-family: arial;
 }
 body {
     margin: 0;
 }
 /*header*/
 .topNavbar{
-    position: relative;
-    background-color: $navbarsColor;
-    height: 2em;
+    width: 100%;
     margin: 0;
-    padding: 0;
+    margin-top: 0;
     ul {
-        padding: 4px;
+        background-color: $navbarsColor;
+        padding: .7em;
+        margin: 0;
         display: flex;
         list-style-type: none;
         justify-content: flex-end;
@@ -67,15 +68,14 @@ body {
         li {
             a {
                 color: $lightFontsColor;
-                padding: 5px 20px;
+                padding: 10px 20px;
                 margin: 5px 0;
-                border-left: 1px solid $navBorderColor; 
+                border-left: 1px solid $navBorderColor;
             }
             form {
                 position: absolute;
-                top: 2.8em;
+                top: 3em;
                 right: 35em;
-                z-index: 2;
                 background-color: $navbarsColor;
                 padding: 5px;
                 font-size: .7em;
@@ -86,6 +86,10 @@ body {
                 input {
                     display: block;
                     margin: 6px 5px;
+                }
+                input[type="submit"] {
+                    position: relative;
+                    left: 70%;
                 }
             }
         }

@@ -6,7 +6,7 @@
 /*formatage du contenu*/
 buttons, input[type=submit], #geoLocButton {
   border-radius: 5px;
-  background-color: #7bf;
+  background-color: #00aa7f;
   color: #32324c;
   padding: 8px;
   border: none;
@@ -16,11 +16,12 @@ buttons, input[type=submit], #geoLocButton {
 buttons:hover,
 input[type=submit]:hover,
 #geoLocButton:hover {
-  background-color: #77f;
+  background-color: #36edbe;
 }
 
 * {
   box-sizing: border-box;
+  font-family: arial;
 }
 
 body {
@@ -29,14 +30,14 @@ body {
 
 /*header*/
 .topNavbar {
-  position: relative;
-  background-color: #05f;
-  height: 2em;
+  width: 100%;
   margin: 0;
-  padding: 0;
+  margin-top: 0;
 }
 .topNavbar ul {
-  padding: 4px;
+  background-color: #00557f;
+  padding: 0.7em;
+  margin: 0;
   display: flex;
   list-style-type: none;
   justify-content: flex-end;
@@ -50,16 +51,15 @@ body {
 }
 .topNavbar ul li a {
   color: #ccf;
-  padding: 5px 20px;
+  padding: 10px 20px;
   margin: 5px 0;
   border-left: 1px solid #ccf;
 }
 .topNavbar ul li form {
   position: absolute;
-  top: 2.8em;
+  top: 3em;
   right: 35em;
-  z-index: 2;
-  background-color: #05f;
+  background-color: #00557f;
   padding: 5px;
   font-size: 0.7em;
   border-bottom-left-radius: 6px;
@@ -70,6 +70,10 @@ body {
 .topNavbar ul li form input {
   display: block;
   margin: 6px 5px;
+}
+.topNavbar ul li form input[type=submit] {
+  position: relative;
+  left: 70%;
 }
 .topNavbar ul li:nth-child(2):hover form {
   display: block;
