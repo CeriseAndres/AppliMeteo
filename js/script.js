@@ -46,6 +46,9 @@ class Map {
         ctx = myMapArea.context;
         ctx.drawImage(this.mapImage, this.x, this.y, this.width, this.height);
     }
+    move() {
+        
+    }
 }
 
 
