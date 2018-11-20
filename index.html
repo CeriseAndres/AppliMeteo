@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-        <link href='css/style.css' rel='stylesheet' type='text/css'>
+        <link href='css/stylePierre.css' rel='stylesheet' type='text/css'>
         <title>Magic Meteo</title>
     </head>
     <body>
@@ -12,10 +12,10 @@
                 <ul>
                     <li><a href="login.html">Login</a>
                         <form class="loginForm" method="post" action="">
-                            <label>Utilisateur</label>
-                            <input type="text" name="user" placeholder="Votre identifiant">
-                            <label>Mot de passe</label>
-                            <input type="password" name="password" placeholder="Votre mot de passe">
+                            <label for="user">Utilisateur</label>
+                            <input id="user" type="text" name="user" placeholder="Votre identifiant">
+                            <label for="password">Mot de passe</label>
+                            <input id="password" type="password" name="password" placeholder="Votre mot de passe">
                             <input type="submit" value="OK">
                         </form>
                     </li>
@@ -25,7 +25,7 @@
                 </ul>
             </nav>
             <div class="headerContent">
-                <div class="headerLogo"><a href="index.html"><img src='img/logo-meteo.png'></a></div>
+                <div class="headerLogo"><a href="index.html"><img src='img/logo-meteo.png' alt='logo Magic Meteo'></a></div>
                 <div class="headerTitle"><h1>Magic Meteo</h1></div>
             </div>
         </header>
@@ -36,15 +36,43 @@
                 <div class="col-xs-12"></div> 
                 
 <!--                recherche sur carte-->
-                <div class="col-sm-7">
-<!--
-                    <canvas class="searchMapCanvas" id="searchMapHome">
-                    </canvas>
--->
+                <div class="col-sm-7 searchMap">
                     <div id='canvasParent'></div>
-
+                </div>
+                
+                <div class="col-sm-5 searchMapForm">
+                    <form class="searchMapOptionsForm">
+                        
+                        <div class="dataTypeSearchCont">
+                            <label for="dataTypeOptions">Type de données recherchées</label>
+                            <select id="dataTypeOptions">
+                                <option>Températures</option>
+                                <option>Vent</option>
+                                <option>Pluie</option>
+                                <option>UV</option>
+                                <option>Alertes</option>
+                            </select>
+                        </div>
+                        
+                        <div class="searchCityCont">
+                            <label for="searchCityVal">Recherche par ville/code postal/nom du lieu</label>
+                            <input id="searchCityVal" type="text" name="searchCityVal" placeholder="Ville, code postal, nom">
+                        </div>
+                        
+                        <div class="searchRegionCont">
+                            <label for="searchRegionVal">Recherche par région</label>
+                            <input id="searchRegionVal" type="text" name="searchRegionVal">
+                        </div>
+                        
+                        <div class="searchGeolocCont">
+                            <img alt="icone geolocalisation" src='img/picto-geoloc.png'>
+                            <span id="geoLocButton">Activer géolocalisation</span>
+                        </div>
+                        <div class="submitCont">
+                            <input type="submit" value="Go">
+                        </div>
+                    </form>
                 </div> 
-                <div class="col-sm-5"></div> 
                 
                 
                 <div class="col-sm-12 col-md-4"></div>

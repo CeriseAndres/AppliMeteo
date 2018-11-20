@@ -6,7 +6,7 @@ let canvasParent = document.getElementById('canvasParent');
 let ctx;
 
 
-
+/*Classes MapArea et Map pour créer l'objet carte et son conteneur (canvas)*/
 class MapArea {
     
     constructor(width, height, parent){
@@ -48,6 +48,8 @@ class Map {
     }
 }
 
+
+/*fonctions de mise à jour de l'affichage pour pouvoir afficher la map et rafraichir son affichage si l'utilisateur la déplace*/
 function updateMap() {
     myMap.update();
 }

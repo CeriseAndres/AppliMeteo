@@ -1,0 +1,122 @@
+$navbarsColor : #05f;
+$navBorderColor : #ccf;
+$lightFontsColor : #ccf;
+$darkFontsColor : #32324c;
+$formsColor : #ccf;
+$buttonsColor : #7bf;
+
+* {
+    box-sizing: border-box;
+}
+
+/*header*/
+.topNavbar{
+    position: relative;
+    background-color: $navbarsColor;
+    height: 2em;
+    margin: 0;
+    padding: 0;
+    ul {
+        padding: 4px;
+        display: flex;
+        list-style-type: none;
+        justify-content: flex-end;
+        li {
+            a {
+                color: $lightFontsColor;
+                padding: 5px 20px;
+                margin: 5px 0;
+                border-left: 1px solid $navBorderColor; 
+            }
+            form {
+                position: absolute;
+                top: 2.8em;
+                right: 35em;
+                z-index: 2;
+                background-color: $navbarsColor;
+                padding: 5px;
+                font-size: .7em;
+                border-bottom-left-radius: 6px;
+                border-bottom-right-radius: 6px;
+                display: none;
+                label, 
+                input {
+                    display: block;
+                    margin: 6px 5px;
+                }
+            }
+        }
+        li:first-child:hover {
+            form {
+                display: block;
+            }
+        }
+    }
+}
+
+
+
+/*bannière */
+.headerContent {
+    width: 1300px;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 auto;
+    .headerTitle {
+        h1 {
+            margin: 1.5em 0;
+            font-size: 4em;
+        }
+        
+    }
+    .headerLogo {
+        img {
+            width: 250px;
+            height: auto;
+            margin: 20px;
+        }
+
+}
+    
+}
+
+
+
+section.container {
+    border: solid black;
+}
+
+/*formulaire recherche sur carte*/
+
+.searchMapForm {
+    .searchMapOptionsForm {
+        background-color: $formsColor;
+        label, input {
+            display: block;
+        }
+        .dataTypeSearchCont {
+            display: block;
+        }
+        .searchCityCont {
+
+            
+        }
+        .searchRegionCont {
+
+            
+        }
+        .searchGeolocCont {
+            padding: 20px;
+
+            img {
+                width: 50px;
+            }
+            #geoLocButton {
+                display: inline-block;
+                background-color: $buttonsColor;
+                color: $darkFontsColor;
+                padding: 10px;
+            }
+        }
+    }
+}
