@@ -147,16 +147,32 @@ section .contentSearch {
 }
 .searchMapForm .searchMapOptionsForm .dataTypeSearchCont {
   display: block;
+  flex: 1;
+}
+.searchMapForm .searchMapOptionsForm .searchCityCont {
+  flex: 1;
+}
+.searchMapForm .searchMapOptionsForm .searchRegionCont {
+  flex: 1;
+  border: solid;
 }
 .searchMapForm .searchMapOptionsForm .searchGeolocCont {
+  flex: 1;
+  border: solid;
   display: flex;
   justify-content: space-around;
 }
 .searchMapForm .searchMapOptionsForm .searchGeolocCont img {
   width: 50px;
+  height: 60px;
 }
 .searchMapForm .searchMapOptionsForm .searchGeolocCont #geoLocButton {
   display: block;
+  height: 50px;
+}
+.searchMapForm .searchMapOptionsForm .submitCont {
+  flex: 1;
+  border: solid;
 }
 
 /*actualités*/
