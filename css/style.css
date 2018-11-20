@@ -247,4 +247,49 @@ footer .footerFooter ul li a {
   text-decoration: none;
 }
 
+/*Login page*/
+.form {
+  background: rgba(0, 85, 127, 0.9);
+  padding: 40px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(0, 85, 127, 0.2);
+}
+.form a {
+  text-decoration: none;
+  color: #00aa7f;
+  transition: 0.5s ease;
+}
+.form a:hover {
+  color: #004433;
+}
+.form .tab_group {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+.form .tab_group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.form .tab_group li a {
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  background: rgba(160, 179, 176, 0.25);
+  color: #a0b3b0;
+  font-size: 20px;
+  float: left;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.form .tab_group li a:hover {
+  background: #00dda5;
+  color: #ffffff;
+}
+
 /*# sourceMappingURL=style.css.map */
