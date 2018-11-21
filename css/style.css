@@ -272,16 +272,19 @@ footer .footerFooter ul li a {
 }
 
 /*Login page*/
-a {
+.loginContentPage {
+  /*Design boutons*/
+  /*Appartion/disparition*/
+}
+.loginContentPage a {
   text-decoration: none;
   color: #00aa7f;
   transition: 0.5s ease;
 }
-a:hover {
+.loginContentPage a:hover {
   color: #004433;
 }
-
-.form1 {
+.loginContentPage .form {
   /*design form*/
   background: rgba(0, 85, 127, 0.9);
   padding: 40px;
@@ -290,18 +293,17 @@ a:hover {
   border-radius: 4px;
   box-shadow: 0 4px 10px 4px rgba(0, 85, 127, 0.2);
 }
-
-.tab_group {
+.loginContentPage .tab_group {
   list-style: none;
   padding: 0;
   margin: 0 0 40px 0;
 }
-.tab_group:after {
+.loginContentPage .tab_group:after {
   content: "";
   display: table;
   clear: both;
 }
-.tab_group li a {
+.loginContentPage .tab_group li a {
   display: block;
   text-decoration: none;
   padding: 15px;
@@ -314,27 +316,24 @@ a:hover {
   cursor: pointer;
   transition: 0.5s ease;
 }
-.tab_group li a:hover {
+.loginContentPage .tab_group li a:hover {
   background: #00dda5;
   color: #ffffff;
 }
-.tab_group .active a {
+.loginContentPage .tab_group .active a {
   background: #00aa7f;
   color: #ffffff;
 }
-
-.tab_content > div:last-child {
+.loginContentPage .tab_content > div:last-child {
   display: none;
 }
-
-h1 {
+.loginContentPage h1 {
   text-align: center;
   color: #ffffff;
   font-weight: 300;
   margin: 0 0 40px;
 }
-
-label {
+.loginContentPage label {
   position: absolute;
   transform: translateY(6px);
   left: 13px;
@@ -344,21 +343,22 @@ label {
   pointer-events: none;
   font-size: 22px;
 }
-label .req {
+.loginContentPage label .req {
   margin: 2px;
   color: #00aa7f;
 }
-
-label.active {
+.loginContentPage label.active {
   transform: translateY(50px);
   left: 2px;
   font-size: 14px;
 }
-label.active .req {
+.loginContentPage label.active .req {
   opacity: 0;
 }
-
-input, textarea {
+.loginContentPage label.highlight {
+  color: #ffffff;
+}
+.loginContentPage input, .loginContentPage textarea {
   font-size: 22px;
   display: block;
   width: 100%;
@@ -371,37 +371,49 @@ input, textarea {
   border-radius: 0;
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
-input:focus, textarea:focus {
+.loginContentPage input:focus, .loginContentPage textarea:focus {
   outline: 0;
   border-color: #bc7d00;
 }
-
-textarea {
+.loginContentPage textarea {
   border: 2px solid #a0b3b0;
   resize: vertical;
 }
-
-.field_wrap {
+.loginContentPage input, .loginContentPage textarea {
+  font-size: 22px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  background: #00dda5;
+  background-image: none;
+  border: 1px solid #a0b3b0;
+  color: #ffffff;
+  border-radius: 0;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.loginContentPage input:focus, .loginContentPage textarea:focus {
+  outline: 0;
+  border-color: #bc7d00;
+}
+.loginContentPage input .field_wrap, .loginContentPage textarea .field_wrap {
   position: relative;
   margin-bottom: 40px;
 }
-
-.top_row:after {
+.loginContentPage .top_row:after {
   content: "";
   display: table;
   clear: both;
 }
-.top_row > div {
+.loginContentPage .top_row > div {
   float: left;
   width: 48%;
   margin-right: 4%;
 }
-.top_row > div:last-child {
+.loginContentPage .top_row > div:last-child {
   margin: 0;
 }
-
-/*Design boutons*/
-.button {
+.loginContentPage .button {
   border: 0;
   outline: none;
   border-radius: 4px;
@@ -416,26 +428,21 @@ textarea {
   -webkit-appearance: none;
   cursor: pointer;
 }
-.button:hover, .button:focus {
+.loginContentPage .button:hover, .loginContentPage .button:focus {
   background: #004433;
 }
-
-.button_block {
+.loginContentPage .button_block {
   display: block;
   width: 100%;
 }
-
-.oubli {
+.loginContentPage .oubli {
   margin-top: -20px;
   text-align: right;
 }
-
-/*Appartion/disparition*/
-#signUp {
+.loginContentPage #signUp {
   display: block;
 }
-
-#logIn {
+.loginContentPage #logIn {
   display: none;
 }
 
