@@ -382,6 +382,7 @@ body {
                     background-color: $navbarsColor;
                     display: block;
                     padding: 8px;
+                    cursor: pointer;
                 }
                 li + li > a {
                     border-top: 1px solid $navBorderColor;

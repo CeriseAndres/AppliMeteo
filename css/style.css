@@ -325,6 +325,7 @@ body {
   background-color: #00557f;
   display: block;
   padding: 8px;
+  cursor: pointer;
 }
 .searchMapForm .searchMapOptionsForm .dataTypeSearchCont #dataTypeList li + li > a {
   border-top: 1px solid #ccf;
