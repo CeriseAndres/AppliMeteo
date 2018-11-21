@@ -87,9 +87,6 @@ function dragMap(e) {
 
 }
 
-//function zoomMap(e) {
-//    
-//}
 
 window.onmousedown = function() {
     mouseIsDown = true;
@@ -103,4 +100,3 @@ let myMap = new Map(-200, -200, 1911, 1781, "img/carte-detaillee-france.jpg");
 
 canvasParent.addEventListener("mousedown", initGrabber);
 canvasParent.addEventListener("mousemove", dragMap);
-//canvasParent.addEventListener("scroll", zoomMap);
