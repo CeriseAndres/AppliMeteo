@@ -1,4 +1,3 @@
-
 /*navbars*/
 $navbarsColor : #00557f;
 $navBorderColor : #ccf;
@@ -205,25 +204,34 @@ section .contentSearch {
         }
         .dataTypeSearchCont {
             display: block;
+            flex: 1;
         }
         .searchCityCont {
-
-            
+            flex: 1;
         }
         .searchRegionCont {
+            flex:1;
+            border: solid;
 
-            
         }
         .searchGeolocCont {
+            flex: 1;
+            border: solid;
             display: flex;
             justify-content: space-around;
 
             img {
                 width: 50px;
+                height: 60px;
             }
             #geoLocButton {
                 display: block;
+                height: 50px;
             }
+        }
+        .submitCont {
+            flex: 1;
+            border: solid;
         }
     }
 }

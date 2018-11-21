@@ -4,6 +4,7 @@ myBody.style.backgroundImage = "url('img/lluvia-animada.gif')";
 myBody.style.backgroundSize = "cover";
 let canvasParent = document.getElementById('canvasParent');
 let ctx;
+let mouseIsDown = false;
 
 
 /*Classes MapArea et Map pour créer l'objet carte et son conteneur (canvas)*/
@@ -20,9 +21,10 @@ class MapArea {
     init() {
         this.canvas.width = this.width;
         this.canvas.height = this.height;
-        this.interval = setInterval(updateMap, 50);
+        updateMap();
     }
     clear() {
+        
         this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
     }
 }
@@ -47,13 +49,15 @@ class Map {
         ctx.drawImage(this.mapImage, this.x, this.y, this.width, this.height);
     }
     move() {
-        
+        this.x += this.moveX;
+        this.y += this.moveY;
+        this.update();
     }
 }
 
-
 /*fonctions de mise à jour de l'affichage pour pouvoir afficher la map et rafraichir son affichage si l'utilisateur la déplace*/
 function updateMap() {
+    myMapArea.clear();
     myMap.update();
 }
 
@@ -61,8 +65,28 @@ window.onload = function() {
     myMapArea.init();
 }
 
-let myMapArea = new MapArea(500, 500, canvasParent);
-let myMap = new Map(-50, -50, 1911, 1781, "img/carte-detaillee-france.jpg");
+function dragMap(e) {
+    if (mouseIsDown) {
+        myMap.moveX = e.clientX - myMap.x;
+        myMap.moveY = e.clientY - myMap.y;
+        myMap.move();
+        requestAnimationFrame(updateMap);
+    }
+    else {
+        cancelAnimationFrame(updateMap);
+    }
 
-myMap.update();
+}
+
+window.onmousedown = function() {
+    mouseIsDown = true;
+}
+window.onmouseup = function() {
+    mouseIsDown = false;
+}
+
+let myMapArea = new MapArea(500, 500, canvasParent);
+let myMap = new Map(-200, -200, 1911, 1781, "img/carte-detaillee-france.jpg");
+
+canvasParent.addEventListener("mousemove", dragMap);
 
