@@ -1,7 +1,7 @@
 /*javascript*/
-let myBody = document.querySelector("body");
-myBody.style.backgroundImage = "url('img/lluvia-animada.gif')";
-myBody.style.backgroundSize = "cover";
+// let myBody = document.querySelector("body");
+// myBody.style.backgroundImage = "url('img/lluvia-animada.gif')";
+// myBody.style.backgroundSize = "cover";
 let canvasParent = document.getElementById('canvasParent');
 let ctx;
 let mouseIsDown = false;

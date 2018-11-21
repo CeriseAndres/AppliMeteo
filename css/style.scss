@@ -452,47 +452,45 @@ footer {
     }
 
 
-input, textarea {
-    font-size:22px;
-    display:block;
-    width:100%;
-    height:100%;
-    padding:5px 10px;
-    background: $colorBlue_2-light;
-    background-image:none;
-    border:1px solid $gray-light;
-    color:$white;
-    border-radius:0;
-    transition:border-color .25s ease, box-shadow .25s ease;
-    &:focus {
-        outline:0;
-        border-color:$colorOrange_1;
+    input, textarea {
+        font-size:22px;
+        display:block;
+        width:100%;
+        height:100%;
+        padding:5px 10px;
+        background: $colorBlue_2-light;
+        background-image:none;
+        border:1px solid $gray-light;
+        color:$white;
+        border-radius:0;
+        transition:border-color .25s ease, box-shadow .25s ease;
+        &:focus {
+            outline:0;
+            border-color:$colorOrange_1;
+        }
+
+        .field_wrap {
+            position:relative;
+            margin-bottom:40px;
+        }
     }
 
-    .field_wrap {
-        position:relative;
-        margin-bottom:40px;
+    .top_row {
+      &:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      > div {
+        float:left;
+        width:48%;
+        margin-right:4%;
+        &:last-child { 
+          margin:0;
+        }
+      }
     }
-
-
-    }
-
-.top_row {
-  &:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-  > div {
-    float:left;
-    width:48%;
-    margin-right:4%;
-    &:last-child { 
-      margin:0;
-    }
-  }
-}
     /*Design boutons*/
     .button {
       border:0;
