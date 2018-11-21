@@ -4,6 +4,8 @@
         <meta charset="utf-8">
         <link href='css/style.css' rel='stylesheet' type='text/css'>
         <title>Magic Meteo</title>
+        
+        
     </head>
     <body>
         <header>
@@ -33,8 +35,8 @@
             <div class="contentPage"> 
                 <div class="form">
                     <ul class="tab_group">
-                        <li class="tab_active"><a href="#signUp">Inscription</a></li>
-                        <li class="tab"><a href="#logIn">Connection</a></li>
+                        <li id="inscription" class="tab active"><a>Inscription</a></li>
+                        <li id="connexion"><a>Connexion</a></li>
                     </ul>
                     <div class=""tab_content>
                         <div id="signUp">
@@ -43,7 +45,7 @@
                                 <div class="top_row">
                                     <div class="field_wrap">
                                         <label>Nom<span class="req">*</span></label>
-                                        <input type="text" required autocomplete="off" />
+                                        <input type="text" required autocomplete="off"/>
                                     </div>
                                     <div class="field_wrap">
                                         <label>Prenom<span class="req">*</span></label>
@@ -59,7 +61,7 @@
                                     <label>Mot de passe<span class="req">*</span></label>
                                     <input type="text" required autocomplete="off" />
                                 </div>
-                                <button type="submit" class="button button-block"/>Inscription</button>
+                                <button type="submit" class="button button_block"/>Inscription</button>
                             </form>
                         </div>
                         <div id="logIn">
@@ -73,17 +75,15 @@
                                     <label>Mot de passe<span class="req">*</span></label>
                                     <input>
                                 </div>
-                                <p></p>
-                                <button class="button button-block"/>Connection</button>
+
+                                <p class="oubli"><a href="#">mot de passe oublié?</a></p>
+
+                                <button class="button button_block"/>Connection</button>
+                                
                             </form>
                         </div>
                     </div>
                 </div>
-
-
-                <form>
-                    
-                </form>
 
             </div>
         </section>
@@ -117,6 +117,8 @@
 
         </footer>
     
-        <script type="text/javascript" src="js/script.js"></script>
+        
+        <script type="text/javascript" src="js/login.js"></script>
+        
     </body>
 </html>
