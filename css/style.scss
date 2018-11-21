@@ -324,6 +324,16 @@ footer {
 }
 
 /*Login page*/
+
+a {
+    text-decoration:none;
+    color:$colorBlue_2;
+    transition:.5s ease;
+    &:hover {
+        color:$colorBlue_2-dark;
+    }
+}
+
 .form {
     /*design form*/
     background:rgba($colorBlue_1,.9);
@@ -332,76 +342,66 @@ footer {
     margin:40px auto;
     border-radius:$br;
     box-shadow:0 4px 10px 4px rgba($colorBlue_1,.2);
-
-    a {
+}
+    
+.tab_group {
+    list-style:none;
+    padding:0;
+    margin:0 0 40px 0;
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    li a {
+        display:block;
         text-decoration:none;
-        color:$colorBlue_2;
+        padding:15px;
+        background:rgba($gray-light,.25);
+        color:$gray-light;
+        font-size:20px;
+        float:left;
+        width:50%;
+        text-align:center;
+        cursor:pointer;
         transition:.5s ease;
         &:hover {
-            color:$colorBlue_2-dark;
-        }
-    }
-    .tab_group {
-        list-style:none;
-        padding:0;
-        margin:0 0 40px 0;
-        &:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-        li a {
-            display:block;
-            text-decoration:none;
-            padding:15px;
-            background:rgba($gray-light,.25);
-            color:$gray-light;
-            font-size:20px;
-            float:left;
-            width:50%;
-            text-align:center;
-            cursor:pointer;
-            transition:.5s ease;
-            &:hover {
-            background:$colorBlue_2-light;
-            color:$white;
-            }
+        background:$colorBlue_2-light;
+        color:$white;
         }
     }
     .active a {
-    background:$colorBlue_2;
-    color:$white;
-    }
-    h1 {
-        text-align:center;
+        background:$colorBlue_2;
         color:$white;
-        font-weight:$thin;
-        margin:0 0 40px;
     }
 }
 
 .tab_content > div:last-child {
   display:none;
 }
+    
+h1 {
+    text-align:center;
+    color:$white;
+    font-weight:$thin;
+    margin:0 0 40px;
+}
 
-.field_wrap {
-    position:relative;
-    margin-bottom:40px;
-    label {
-        position:absolute;
-        transform:translateY(6px);
-        left:13px;
-        color:rgba($white,.5);
-        transition:all 0.25s ease;
-        -webkit-backface-visibility: hidden;
-        pointer-events: none;
-        font-size:22px;
-        .req {
-            margin:2px;
-            color:$colorBlue_2;
-         }
+label { 
+    position:absolute;
+    transform:translateY(6px);
+    left:13px;
+    color:rgba($white,.5);
+    transition:all 0.25s ease;
+    -webkit-backface-visibility: hidden;
+    pointer-events: none;
+    font-size:22px;
+    .req {
+        margin:2px;
+        color:$colorBlue_2;
     }
 }
+
 label.active {
     transform:translateY(50px);
     left:2px;
@@ -410,9 +410,11 @@ label.active {
         opacity:0;
     }
 }
+
 label.highlight {
     color:$white;
 }
+
 input, textarea {
     font-size:22px;
     display:block;
@@ -434,6 +436,12 @@ input, textarea {
 textarea {
   border:2px solid $gray-light;
   resize: vertical;
+}
+
+.field_wrap {
+    position:relative;
+    margin-bottom:40px;
+    
 }
 
 .top_row {
@@ -476,4 +484,14 @@ textarea {
   width:100%;
 }
 
-
+.oubli {
+  margin-top:-20px;
+  text-align:right;
+}
+/*Appartion/disparition*/
+#signUp {
+    display: block;
+}
+#logIn {
+    display: none;
+}
