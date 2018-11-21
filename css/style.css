@@ -24,6 +24,7 @@ input[type=submit]:hover,
 * {
   box-sizing: border-box;
   font-family: arial;
+  font-size: 16px;
 }
 
 body {
@@ -56,10 +57,11 @@ body {
   padding: 10px 20px;
   margin: 5px 0;
   border-left: 1px solid #ccf;
+  text-decoration: none;
 }
 .topNavbar ul li form {
   position: absolute;
-  top: 3em;
+  top: 3.6em;
   right: 35em;
   background-color: #00557f;
   padding: 5px;
@@ -76,6 +78,15 @@ body {
 .topNavbar ul li form input[type=submit] {
   position: relative;
   left: 70%;
+}
+.topNavbar ul li form span {
+  display: block;
+  margin: 5px 0 8px 0;
+  text-align: right;
+}
+.topNavbar ul li form span a {
+  border: 1px solid #ccf;
+  padding: 3px;
 }
 .topNavbar ul li:nth-child(2):hover form {
   display: block;
@@ -106,16 +117,160 @@ body {
   padding: 30px 30px 100px 30px;
 }
 
-section .contentSearch {
+/*recherche simple - conteneur principal*/
+.simpleSearch {
   display: flex;
-  padding-bottom: 20px;
+  width: 90%;
+  margin: 0 auto 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px #0003;
+}
+.simpleSearch .simpleSearchForm {
+  background-color: #ccf;
+  width: 200px;
+  padding: 10px;
+}
+.simpleSearch .simpleSearchForm form input, .simpleSearch .simpleSearchForm form label {
+  width: 100%;
+  margin: 10px 0;
+}
+.simpleSearch .tab_wrapper {
+  display: flex;
+  width: 100%;
+}
+.simpleSearch .tab_wrapper .tab {
+  flex: 1;
+  background-color: #eee;
+  margin: 0 2px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.simpleSearch .tab_wrapper .tab h6 {
+  display: block;
+  border-bottom: 1px solid #bbb;
+  margin: 0;
+  padding: 3px;
+  text-align: center;
+}
+.simpleSearch .tab_wrapper .tab .tab-body {
+  border-bottom: 1px solid #bbb;
+  padding: 15px;
+}
+.simpleSearch .tab_wrapper .tab .tab-body img {
+  width: 80px;
+  display: block;
+  margin: 0 auto;
+}
+.simpleSearch .tab_wrapper .tab span {
+  display: block;
+  text-align: center;
+  padding: 3px 0;
+}
+.simpleSearch .tab_wrapper .tab .tmpMax {
+  color: red;
+  border-bottom: 1px solid #bbb;
+}
+.simpleSearch .tab_wrapper .tab .tmpMin {
+  color: blue;
+}
+.simpleSearch .tab_wrapper .tab:hover, .simpleSearch .tab_wrapper .active {
+  box-shadow: 0 4px 8px #000a;
+  flex: 1.5;
 }
 
-.contentSearch {
+/*details recherche simple*/
+.simpleSearchDetails {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px #0003;
+  padding: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+.simpleSearchDetails .detailsHeader {
+  display: block;
+}
+.simpleSearchDetails .detailsHeader h5 {
+  padding: 5px 0;
+  margin: 0;
+  font-size: 1.5em;
+}
+.simpleSearchDetails .detailsWrapper {
   display: flex;
 }
-.contentSearch .tab_wrapper {
+.simpleSearchDetails .detailsWrapper .dayPart {
+  background-color: #00557f;
+  flex: 20%;
+  margin: 0 2px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.simpleSearchDetails .detailsWrapper .dayPart h6 {
+  text-align: center;
+}
+.simpleSearchDetails .detailsWrapper .dayPart .icone {
+  padding: 10px 0;
+}
+.simpleSearchDetails .detailsWrapper .dayPart .icone img {
+  width: 80px;
+  display: block;
+  margin: 0 auto;
+}
+.simpleSearchDetails .detailsWrapper .dayPart .details {
+  visibility: hidden;
+}
+.simpleSearchDetails .detailsWrapper .dayPart .detailsTmp {
   display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.simpleSearchDetails .detailsWrapper .dayPart .detailsTmp span {
+  background-color: #fff9;
+  font-weight: bold;
+  padding: 8px;
+  margin: 0 6px;
+  border-radius: 20px;
+}
+.simpleSearchDetails .detailsWrapper .dayPart .detailsTmp .detailsMaxTmp {
+  color: red;
+}
+.simpleSearchDetails .detailsWrapper .dayPart .detailsTmp .detailsMinTmp {
+  color: blue;
+}
+.simpleSearchDetails .detailsWrapper .active {
+  background-color: #00aa7f;
+  flex: 60%;
+  box-shadow: 0 4px 8px #000b;
+}
+.simpleSearchDetails .detailsWrapper .active .icone img {
+  width: 100px;
+}
+.simpleSearchDetails .detailsWrapper .active .details {
+  display: flex;
+  visibility: visible;
+}
+.simpleSearchDetails .detailsWrapper .active .details span {
+  flex: 1;
+  border-bottom: 1px solid #0005;
+  border-top: 1px solid #0005;
+  padding: 6px 0;
+  text-align: center;
+  background-color: #fff2;
+}
+.simpleSearchDetails .detailsWrapper .active .details span:first-child {
+  flex: 1.5;
+}
+.simpleSearchDetails .detailsWrapper .active .details span + span {
+  border-left: 1px solid #0002;
+}
+.simpleSearchDetails .detailsWrapper h6 {
+  padding: 8px 0;
+  margin: 0;
+  background-color: #fffb;
+  border-bottom: 1px solid #000b;
 }
 
 /*recherche sur carte - conteneur principal*/
@@ -133,6 +288,14 @@ section .contentSearch {
 /*formulaire d'options recherche sur carte*/
 .searchMap {
   overflow: hidden;
+  width: 500px;
+  height: 500px;
+  position: relative;
+}
+.searchMap img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 
 .searchMapForm .searchMapOptionsForm {
@@ -146,23 +309,38 @@ section .contentSearch {
 .searchMapForm .searchMapOptionsForm label, .searchMapForm .searchMapOptionsForm input {
   display: block;
   width: 100%;
+  padding: 8px;
 }
 .searchMapForm .searchMapOptionsForm .dataTypeSearchCont {
   display: block;
   flex: 1;
 }
+.searchMapForm .searchMapOptionsForm .dataTypeSearchCont #dataTypeList {
+  list-style-type: none;
+  padding: 0;
+}
+.searchMapForm .searchMapOptionsForm .dataTypeSearchCont #dataTypeList a {
+  text-decoration: none;
+  color: #ccf;
+  background-color: #00557f;
+  display: block;
+  padding: 8px;
+}
+.searchMapForm .searchMapOptionsForm .dataTypeSearchCont #dataTypeList li + li > a {
+  border-top: 1px solid #ccf;
+}
 .searchMapForm .searchMapOptionsForm .searchCityCont {
   flex: 1;
+  display: block;
 }
-.searchMapForm .searchMapOptionsForm .searchRegionCont {
-  flex: 1;
-  border: solid;
+.searchMapForm .searchMapOptionsForm .searchCityCont input {
+  margin: 0 0 5px 0;
 }
 .searchMapForm .searchMapOptionsForm .searchGeolocCont {
   flex: 1;
-  border: solid;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
 .searchMapForm .searchMapOptionsForm .searchGeolocCont img {
   width: 50px;
@@ -170,11 +348,12 @@ section .contentSearch {
 }
 .searchMapForm .searchMapOptionsForm .searchGeolocCont #geoLocButton {
   display: block;
-  height: 50px;
+  margin: 0 8px;
 }
 .searchMapForm .searchMapOptionsForm .submitCont {
   flex: 1;
-  border: solid;
+  display: flex;
+  align-items: center;
 }
 
 /*actualités*/
