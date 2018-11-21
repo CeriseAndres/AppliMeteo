@@ -29,29 +29,26 @@ class MapArea {
     }
 }
 
-
+let currentMapX = -200;
+let currentMapY = -200;
 class Map {
     
     constructor(x, y, width, height, source) {
-        
+        this.grabX;
+        this.grabY;
+        this.offsetX;
+        this.offsetY;
         this.x = x;
         this.y = y;
-        this.moveX = 0;
-        this.moveY = 0;
         this.mapImage = new Image();
         this.mapImage.src = source;
         this.width = this.mapImage.width;
-        this.height = this.mapImage.height; 
+        this.height = this.mapImage.height;
     }
     
     update() {
         ctx = myMapArea.context;
-        ctx.drawImage(this.mapImage, this.x, this.y, this.width, this.height);
-    }
-    move() {
-        this.x += this.moveX;
-        this.y += this.moveY;
-        this.update();
+        ctx.drawImage(this.mapImage, currentMapX, currentMapY, this.width, this.height);
     }
 }
 
@@ -65,11 +62,23 @@ window.onload = function() {
     myMapArea.init();
 }
 
+function initGrabber(e) {
+    let initGrabX = e.clientX;
+    let initGrabY = e.clientY;
+    myMap.offsetX = initGrabX;
+    myMap.offsetY = initGrabY;
+}
+
 function dragMap(e) {
+
     if (mouseIsDown) {
-        myMap.moveX = e.clientX - myMap.x;
-        myMap.moveY = e.clientY - myMap.y;
-        myMap.move();
+        myMap.grabX = e.clientX;
+        myMap.grabY = e.clientY;
+        myMap.x = myMap.grabX - myMap.offsetX;
+        myMap.y = myMap.grabY - myMap.offsetY;
+        currentMapX = myMap.x;
+        currentMapY = myMap.y;
+        myMap.update();
         requestAnimationFrame(updateMap);
     }
     else {
@@ -77,6 +86,10 @@ function dragMap(e) {
     }
 
 }
+
+//function zoomMap(e) {
+//    
+//}
 
 window.onmousedown = function() {
     mouseIsDown = true;
@@ -88,5 +101,6 @@ window.onmouseup = function() {
 let myMapArea = new MapArea(500, 500, canvasParent);
 let myMap = new Map(-200, -200, 1911, 1781, "img/carte-detaillee-france.jpg");
 
+canvasParent.addEventListener("mousedown", initGrabber);
 canvasParent.addEventListener("mousemove", dragMap);
-
+//canvasParent.addEventListener("scroll", zoomMap);
