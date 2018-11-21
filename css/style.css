@@ -118,6 +118,12 @@ section .contentSearch {
   display: flex;
 }
 
+/*Recherche Simple*/
+.tab {
+  border: 1px solid #bc7d00;
+  display: block;
+}
+
 /*recherche sur carte - conteneur principal*/
 .searchMapCont {
   display: flex;
@@ -259,7 +265,7 @@ a:hover {
   color: #004433;
 }
 
-.form {
+.form1 {
   /*design form*/
   background: rgba(0, 85, 127, 0.9);
   padding: 40px;
@@ -334,10 +340,6 @@ label.active {
 }
 label.active .req {
   opacity: 0;
-}
-
-label.highlight {
-  color: #ffffff;
 }
 
 input, textarea {

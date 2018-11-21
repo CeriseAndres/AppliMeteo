@@ -165,6 +165,12 @@ section .contentSearch {
     }
 }
 
+/*Recherche Simple*/
+.tab {
+    border: 1px solid $colorOrange_1;
+    display: block;
+}
+
 /*recherche sur carte - conteneur principal*/
 .searchMapCont {
     display: flex;
@@ -334,7 +340,7 @@ a {
     }
 }
 
-.form {
+.form1 {
     /*design form*/
     background:rgba($colorBlue_1,.9);
     padding: 40px;
@@ -342,6 +348,7 @@ a {
     margin:40px auto;
     border-radius:$br;
     box-shadow:0 4px 10px 4px rgba($colorBlue_1,.2);
+
 }
     
 .tab_group {
@@ -409,10 +416,6 @@ label.active {
     .req {
         opacity:0;
     }
-}
-
-label.highlight {
-    color:$white;
 }
 
 input, textarea {
