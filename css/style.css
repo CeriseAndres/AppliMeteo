@@ -512,43 +512,6 @@ a {
   position: relative;
 }
 
-/*footer*/
-footer {
-  display: block;
-  background-color: #00557f;
-  padding: 10px 10px 0 10px;
-  width: 100%;
-}
-footer .footerContent {
-  display: flex;
-  justify-content: center;
-}
-footer .footerContent .footer {
-  margin: 20px;
-  flex: 30%;
-  height: 200px;
-  background-color: #00aa7f;
-}
-@media (max-width: 600px) {
-  footer .footerContent {
-    flex-direction: column;
-  }
-}
-footer .footerFooter {
-  display: flex;
-  justify-content: center;
-}
-footer .footerFooter ul li {
-  list-style: none;
-  display: inline-block;
-  font-size: 14px;
-  margin: 20px;
-}
-footer .footerFooter ul li a {
-  color: inherit;
-  text-decoration: none;
-}
-
 /*Login page*/
 .loginContentPage {
   /*Design boutons*/
@@ -717,6 +680,92 @@ footer .footerFooter ul li a {
 }
 .loginContentPage #logIn {
   display: none;
+}
+
+/*footer*/
+footer {
+  display: block;
+  background-color: #00557f;
+  padding: 10px 10px 0 10px;
+  width: 100%;
+  color: #ffffff;
+}
+footer .footerHead {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 5px auto;
+  border: 1px solid #0003;
+  border-bottom: none;
+  padding: 25px;
+  background-image: linear-gradient(#eef5, #00557f);
+  background-color: #eef5;
+}
+footer .footerHead a {
+  text-decoration: none;
+  cursor: pointer;
+}
+footer .footerHead a h3 {
+  margin: 0;
+  font-size: 2em;
+  text-shadow: 1px 3px 4px #0009;
+  color: #ffffff;
+}
+footer .footerHead .logosRS {
+  margin-left: auto;
+  position: relative;
+}
+footer .footerHead .logosRS img {
+  width: 35px;
+  height: 35px;
+  margin: 0 10px;
+}
+footer .footerContent {
+  display: flex;
+  padding: 10px 10px 0 10px;
+}
+footer .footerContent .footer {
+  border: 1px solid;
+  border-radius: 5px;
+  box-shadow: 0 3px 5px #0009;
+  margin: 20px;
+  flex: 30%;
+}
+footer .footerContent .footer h5 {
+  margin: 8px;
+  font-size: 1.5em;
+  text-shadow: 1px 3px 4px #0009;
+}
+footer .footerContent .footer ul li {
+  list-style: none;
+  padding: 3px;
+}
+footer .footerContent .footer ul li a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  footer .footerContent {
+    flex-direction: column;
+  }
+}
+footer .footerFooter {
+  display: flex;
+  justify-content: center;
+}
+footer .footerFooter ul li {
+  list-style: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 20px;
+}
+footer .footerFooter ul li a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  padding: 8px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
