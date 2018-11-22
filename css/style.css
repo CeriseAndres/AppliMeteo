@@ -1,10 +1,11 @@
 @charset "UTF-8";
+/*palette couleurs*/
 /*navbars*/
 /*polices*/
 /*boutons*/
-/*fond body*/
+/*fond content body*/
 /*bleu font carte*/
-/*palette couleurs*/
+/*footer colors*/
 /*formatage du contenu*/
 /*variables login Content*/
 buttons, input[type=submit], #geoLocButton {
@@ -14,12 +15,13 @@ buttons, input[type=submit], #geoLocButton {
   padding: 8px;
   border: none;
   cursor: pointer;
+  font-weight: bold;
 }
 
 buttons:hover,
 input[type=submit]:hover,
 #geoLocButton:hover {
-  background-color: #36edbe;
+  background-color: #00dda5;
 }
 
 * {
@@ -53,6 +55,10 @@ body {
   border-left: none;
   border-right: 1px solid #ccf;
 }
+.topNavbar ul li a:hover {
+  background-color: #0099e5;
+  color: #32324c;
+}
 .topNavbar ul li a {
   color: #ccf;
   padding: 10px 20px;
@@ -70,6 +76,7 @@ body {
   border-bottom-left-radius: 6px;
   border-bottom-right-radius: 6px;
   display: none;
+  color: #ccf;
 }
 .topNavbar ul li form label,
 .topNavbar ul li form input {
@@ -292,7 +299,7 @@ body {
   width: 500px;
   height: 500px;
   position: relative;
-  background-color: #bcf;
+  background-color: #cdf;
 }
 .searchMap img {
   width: 100%;
@@ -385,6 +392,10 @@ body {
 }
 .searchMapForm .searchMapOptionsForm .dataTypeSearchCont #dataTypeList li + li > a {
   border-top: 1px solid #ccf;
+}
+.searchMapForm .searchMapOptionsForm .dataTypeSearchCont #dataTypeList a:hover {
+  background-color: #0099e5;
+  color: #32324c;
 }
 .searchMapForm .searchMapOptionsForm .searchCityCont {
   flex: 1;
@@ -537,8 +548,8 @@ footer .footerFooter ul li a {
   display: block;
   text-decoration: none;
   padding: 15px;
-  background: rgba(160, 179, 176, 0.25);
-  color: #a0b3b0;
+  background: rgba(221, 221, 221, 0.25);
+  color: #ddd;
   font-size: 20px;
   float: left;
   width: 50%;
@@ -596,7 +607,7 @@ footer .footerFooter ul li a {
   padding: 5px 10px;
   background: #00dda5;
   background-image: none;
-  border: 1px solid #a0b3b0;
+  border: 1px solid #ddd;
   color: #ffffff;
   border-radius: 0;
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
@@ -606,7 +617,7 @@ footer .footerFooter ul li a {
   border-color: #bc7d00;
 }
 .loginContentPage textarea {
-  border: 2px solid #a0b3b0;
+  border: 2px solid #ddd;
   resize: vertical;
 }
 .loginContentPage .field_wrap {

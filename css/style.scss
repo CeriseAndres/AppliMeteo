@@ -1,25 +1,3 @@
-/*navbars*/
-$navbarsColor : #00557f;
-$navBorderColor : #ccf;
-
-/*polices*/
-$lightFontsColor : #ccf;
-$darkFontsColor : #32324c;
-$formsColor : #ccf;
-$tempColor : #66a;
-
-/*boutons*/
-$buttonsColor : #00aa7f;
-$buttonsBrRadius : 5px;
-$paddingButtons: 8px;
-$hoverButtonsColor: #36edbe;
-
-/*fond body*/
-$generalBgColor : #eef;
-
-/*bleu font carte*/
-$bgMap: #bcf;
-
 /*palette couleurs*/
 $colorBlue_1: #00557f;
 $colorBlue_2: #00aa7f;
@@ -29,8 +7,38 @@ $colorBlue_2-dark: darken($colorBlue_2, 20%);
 $colorOrange_1-light: lighten($colorOrange_1, 20%);
 $colorOrange_1-dark: darken($colorOrange_1, 20%);
 $white: #ffffff;
-$gray-light: #a0b3b0;
-$gray: #ddd;
+$gray: #a0b3b0;
+$gray-light: #ddd;
+$colorBlue_1-light: lighten($colorBlue_1, 20%);
+
+/*navbars*/
+$navbarsColor : $colorBlue_1;
+$navBorderColor : #ccf;
+$hoverNavbar : $colorBlue_1-light;
+
+/*polices*/
+$lightFontsColor : #ccf;
+$darkFontsColor : #32324c;
+$formsColor : #ccf;
+$tempColor : #66a;
+
+/*boutons*/
+$buttonsColor : $colorBlue_2;
+$buttonsBrRadius : 5px;
+$paddingButtons: 8px;
+$hoverButtonsColor: $colorBlue_2-light;
+
+/*fond content body*/
+$generalBgColor : #eef;
+
+/*bleu font carte*/
+$bgMap: #cdf;
+
+/*footer colors*/
+$footerBg : $colorBlue_1;
+//$footerBoxes : $colorBlue_2;
+
+
 
 /*formatage du contenu*/
 $contentWidth : 90%;
@@ -54,6 +62,7 @@ buttons, input[type="submit"], #geoLocButton {
     padding: $paddingButtons;
     border: none;
     cursor: pointer;
+    font-weight: bold;
 }
 buttons:hover, 
 input[type="submit"]:hover, 
@@ -87,9 +96,14 @@ body {
                 border-left: none;
                 border-right: 1px solid $navBorderColor;
             }
+            
 
         }
         li {
+            a:hover {
+                background-color: $hoverNavbar;
+                color: $darkFontsColor;
+            }
             a {
                 color: $lightFontsColor;
                 padding: 10px 20px;
@@ -107,6 +121,7 @@ body {
                 border-bottom-left-radius: 6px;
                 border-bottom-right-radius: 6px;
                 display: none;
+                color: $lightFontsColor;
                 label, 
                 input {
                     display: block;
@@ -347,6 +362,7 @@ body {
 
 
 /*formulaire d'options recherche sur carte*/
+//affichage des résultats
 .searchMap {
     overflow: hidden;
     width: 500px;
@@ -417,7 +433,7 @@ body {
         }
     }
 }
-
+//formulaire
 .searchMapForm {
 
     .searchMapOptionsForm {
@@ -449,6 +465,10 @@ body {
                 }
                 li + li > a {
                     border-top: 1px solid $navBorderColor;
+                }
+                a:hover {
+                    background-color: $hoverNavbar;
+                    color: $darkFontsColor;
                 }
             }
         }
@@ -536,7 +556,7 @@ body {
 /*footer*/
 footer {
 	display:block;
-	background-color: $colorBlue_1;
+	background-color: $footerBg;
 	//border-radius: 20px;
 	padding: 10px 10px 0 10px;
 	width: 100%;
