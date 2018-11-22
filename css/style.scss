@@ -6,6 +6,7 @@ $navBorderColor : #ccf;
 $lightFontsColor : #ccf;
 $darkFontsColor : #32324c;
 $formsColor : #ccf;
+$tempColor : #66a;
 
 /*boutons*/
 $buttonsColor : #00aa7f;
@@ -15,6 +16,9 @@ $hoverButtonsColor: #36edbe;
 
 /*fond body*/
 $generalBgColor : #eef;
+
+/*bleu font carte*/
+$bgMap: #bcf;
 
 /*palette couleurs*/
 $colorBlue_1: #00557f;
@@ -348,10 +352,69 @@ body {
     width: 500px;
     height: 500px;
     position: relative;
+    background-color: $bgMap;
     img {
         width: 100%;
         height: 100%;
         position: absolute;
+    }
+    .dataGridCont {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: Grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        .dataGrid {
+            position: relative;
+            .prevGrid {
+                img {
+                    width: 50px;
+                    height: 50px;
+                    position: relative;
+                    top: 25px;
+                    margin: 0 auto;
+                    display: block;
+                }
+                
+            }
+            .tempGrid {
+                display: none;
+                .tmpVal {
+                    font-size: 1.3em;
+                    font-weight: bold;
+                    color: $tempColor;
+                    margin: 20px auto;
+                    display: block;
+                    width: 30px;
+                    background-color: #fff9;
+                    border-radius: 8px;
+                    box-shadow: 0 0 10px #fff;
+                    text-align: center;
+                }
+            }
+            .windGrid{
+                display: none;
+                justify-content: space-around;
+                width: 50%;
+                height: 100%;
+                align-items: center;
+                margin: 0 auto;
+                img {
+                    width: 40px;
+                    height: 40px;
+                    display: block;
+                    position: relative;
+                }
+                .windVal {
+                    display: inline-block;
+                    position: relative;
+                    font-size: 1.2em;
+                    color: #00b;
+                    
+                }
+            }
+        }
     }
 }
 
