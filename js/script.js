@@ -1,5 +1,3 @@
-/*javascript*/
-
 /*selection des onglets par jours (recherche simple)*/
 let searchTabs = document.getElementsByClassName("tab");
 let detailsTitle = document.querySelector(".detailsHeader>h5");
