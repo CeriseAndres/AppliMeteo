@@ -114,7 +114,15 @@ a {
   margin: 20px auto;
   border: 1px solid #0003;
   padding: 25px;
-  background-color: #eef5;
+  position: relative;
+  overflow: hidden;
+}
+.headerContent .headerBG {
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  z-index: -1;
 }
 .headerContent .headerTitle {
   display: flex;
