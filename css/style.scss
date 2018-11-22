@@ -1,21 +1,3 @@
-/*navbars*/
-$navbarsColor : #00557f;
-$navBorderColor : #ccf;
-
-/*polices*/
-$lightFontsColor : #ccf;
-$darkFontsColor : #32324c;
-$formsColor : #ccf;
-
-/*boutons*/
-$buttonsColor : #00aa7f;
-$buttonsBrRadius : 5px;
-$paddingButtons: 8px;
-$hoverButtonsColor: #36edbe;
-
-/*fond body*/
-$generalBgColor : #eef;
-
 /*palette couleurs*/
 $colorBlue_1: #00557f;
 $colorBlue_2: #00aa7f;
@@ -25,8 +7,38 @@ $colorBlue_2-dark: darken($colorBlue_2, 20%);
 $colorOrange_1-light: lighten($colorOrange_1, 20%);
 $colorOrange_1-dark: darken($colorOrange_1, 20%);
 $white: #ffffff;
-$gray-light: #a0b3b0;
-$gray: #ddd;
+$gray: #a0b3b0;
+$gray-light: #ddd;
+$colorBlue_1-light: lighten($colorBlue_1, 20%);
+
+/*navbars*/
+$navbarsColor : $colorBlue_1;
+$navBorderColor : #ccf;
+$hoverNavbar : $colorBlue_1-light;
+
+/*polices*/
+$lightFontsColor : #ccf;
+$darkFontsColor : #32324c;
+$formsColor : #ccf;
+$tempColor : #66a;
+
+/*boutons*/
+$buttonsColor : $colorBlue_2;
+$buttonsBrRadius : 5px;
+$paddingButtons: 8px;
+$hoverButtonsColor: $colorBlue_2-light;
+
+/*fond content body*/
+$generalBgColor : #eef;
+
+/*bleu font carte*/
+$bgMap: #cdf;
+
+/*footer colors*/
+$footerBg : $colorBlue_1;
+//$footerBoxes : $colorBlue_2;
+
+
 
 /*formatage du contenu*/
 $contentWidth : 90%;
@@ -50,6 +62,7 @@ buttons, input[type="submit"], #geoLocButton {
     padding: $paddingButtons;
     border: none;
     cursor: pointer;
+    font-weight: bold;
 }
 buttons:hover, 
 input[type="submit"]:hover, 
@@ -60,6 +73,7 @@ input[type="submit"]:hover,
 * {
     box-sizing: border-box;
     font-family: arial;
+    font-size: 16px;
 }
 body {
     margin: 0;
@@ -82,18 +96,24 @@ body {
                 border-left: none;
                 border-right: 1px solid $navBorderColor;
             }
+            
 
         }
         li {
+            a:hover {
+                background-color: $hoverNavbar;
+                color: $darkFontsColor;
+            }
             a {
                 color: $lightFontsColor;
                 padding: 10px 20px;
                 margin: 5px 0;
                 border-left: 1px solid $navBorderColor;
+                text-decoration: none;
             }
             form {
                 position: absolute;
-                top: 3em;
+                top: 3.6em;
                 right: 35em;
                 background-color: $navbarsColor;
                 padding: 5px;
@@ -101,6 +121,7 @@ body {
                 border-bottom-left-radius: 6px;
                 border-bottom-right-radius: 6px;
                 display: none;
+                color: $lightFontsColor;
                 label, 
                 input {
                     display: block;
@@ -109,6 +130,16 @@ body {
                 input[type="submit"] {
                     position: relative;
                     left: 70%;
+                }
+                span {
+                    display: block;
+                    margin: 5px 0 8px 0;
+                    text-align: right;
+                    
+                    a {
+                        border: 1px solid $navBorderColor;
+                        padding:3px;
+                    }
                 }
             }
         }
@@ -153,14 +184,167 @@ body {
     margin: 0 auto;
     padding: 30px 30px 100px 30px;
 }
-section .contentSearch {
+
+
+/*recherche simple - conteneur principal*/
+
+.simpleSearch {
     display: flex;
-    padding-bottom: 20px;
-}
-.contentSearch {
-    display: flex;
+    width: $contentWidth;
+    margin: 0 auto 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: $boxBrRadius;
+    box-shadow: $boxShadows;
+    .simpleSearchForm {
+        background-color: $formsColor;
+        width: 200px;
+        padding: 10px;
+        form {
+            input, label {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    }
     .tab_wrapper {
         display: flex;
+        width: 100%;
+        .tab {
+            flex: 1;
+            background-color: #eee;
+            margin: 0 2px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            cursor: pointer;
+            h6 {
+                display: block;
+                border-bottom : 1px solid #bbb;
+                margin: 0;
+                padding: 3px;
+                text-align: center;
+            }
+            .tab-body {
+                border-bottom: 1px solid #bbb;
+                padding: 15px;
+                img {
+                    width: 80px;
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+            span {
+                display: block;
+                text-align: center;
+                padding: 3px 0;
+            }
+            .tmpMax {
+                color: red;
+                border-bottom: 1px solid #bbb;
+            }
+            .tmpMin {
+                color: blue;
+            }
+        }
+        .tab:hover, .active {
+            box-shadow: 0 4px 8px #000a;
+            flex: 1.5;
+        }
+    }
+}
+/*details recherche simple*/
+.simpleSearchDetails {
+    background-color: #fff;
+    border-radius: $boxBrRadius;
+    box-shadow: $boxShadows;
+    padding: 20px;
+    width: $contentWidth;
+    margin: 0 auto;
+    .detailsHeader {
+        display: block;
+        h5 {
+            padding: 5px 0;
+            margin: 0;
+            font-size: 1.5em;
+        }
+    }
+    .detailsWrapper {
+        display: flex;
+        .dayPart {
+            background-color: $colorBlue_1;
+            flex: 20%;
+            margin: 0 2px;
+            border-radius: 4px;
+            cursor: pointer;
+            h6 {
+                text-align: center;
+            }
+            .icone {
+                padding: 10px 0;
+                img {
+                    width: 80px;
+                    display: block;
+                    margin: 0 auto;
+                }
+            }
+            .details {
+                visibility: hidden;
+            }
+            .detailsTmp {
+                display: flex;
+                justify-content: space-between;
+                padding: 10px 0;
+                span {
+                    background-color: #fff9;
+                    font-weight: bold;
+                    padding: 8px;
+                    margin: 0 6px;
+                    border-radius: 20px;
+                }
+                .detailsMaxTmp{
+                    color: red;
+                }
+                .detailsMinTmp {
+                    color: blue;
+                }
+            }
+        }
+        .active {
+                background-color: $colorBlue_2;
+                flex: 60%;
+                box-shadow: 0 4px 8px #000b;
+            .icone {
+                img {
+                    width: 100px;
+                }
+            }
+            .details {
+                display: flex;
+                visibility: visible;
+                span {
+                    flex: 1;
+                    border-bottom: 1px solid #0005;
+                    border-top: 1px solid #0005;
+                    padding: 6px 0;
+                    text-align: center;
+                    background-color: #fff2;
+                }
+                span:first-child {
+                    flex: 1.5;
+                }
+                span+span {
+                    border-left: 1px solid #0002;
+                }
+                
+            }
+            
+            }
+        h6 {
+            padding: 8px 0;
+            margin: 0;
+            background-color: #fffb;
+            border-bottom: 1px solid #000b;
+        }
     }
 }
 
@@ -184,10 +368,78 @@ section .contentSearch {
 
 
 /*formulaire d'options recherche sur carte*/
+//affichage des résultats
 .searchMap {
     overflow: hidden;
+    width: 500px;
+    height: 500px;
+    position: relative;
+    background-color: $bgMap;
+    img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+    }
+    .dataGridCont {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: Grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        .dataGrid {
+            position: relative;
+            .prevGrid {
+                img {
+                    width: 50px;
+                    height: 50px;
+                    position: relative;
+                    top: 25px;
+                    margin: 0 auto;
+                    display: block;
+                }
+                
+            }
+            .tempGrid {
+                display: none;
+                .tmpVal {
+                    font-size: 1.3em;
+                    font-weight: bold;
+                    color: $tempColor;
+                    margin: 20px auto;
+                    display: block;
+                    width: 30px;
+                    background-color: #fff9;
+                    border-radius: 8px;
+                    box-shadow: 0 0 10px #fff;
+                    text-align: center;
+                }
+            }
+            .windGrid{
+                display: none;
+                justify-content: space-around;
+                width: 50%;
+                height: 100%;
+                align-items: center;
+                margin: 0 auto;
+                img {
+                    width: 40px;
+                    height: 40px;
+                    display: block;
+                    position: relative;
+                }
+                .windVal {
+                    display: inline-block;
+                    position: relative;
+                    font-size: 1.2em;
+                    color: #00b;
+                    
+                }
+            }
+        }
+    }
 }
-
+//formulaire
 .searchMapForm {
 
     .searchMapOptionsForm {
@@ -201,24 +453,43 @@ section .contentSearch {
         label, input {
             display: block;
             width: 100%;
+            padding: 8px;
         }
         .dataTypeSearchCont {
             display: block;
             flex: 1;
+            #dataTypeList {
+                list-style-type: none;
+                padding: 0;
+                a {
+                    text-decoration: none;
+                    color: $lightFontsColor;
+                    background-color: $navbarsColor;
+                    display: block;
+                    padding: 8px;
+                    cursor: pointer;
+                }
+                li + li > a {
+                    border-top: 1px solid $navBorderColor;
+                }
+                a:hover {
+                    background-color: $hoverNavbar;
+                    color: $darkFontsColor;
+                }
+            }
         }
         .searchCityCont {
             flex: 1;
-        }
-        .searchRegionCont {
-            flex:1;
-            border: solid;
-
+            display: block;
+            input {
+                margin: 0 0 5px 0;
+            }
         }
         .searchGeolocCont {
             flex: 1;
-            border: solid;
             display: flex;
             justify-content: space-around;
+            align-items: center;
 
             img {
                 width: 50px;
@@ -226,12 +497,13 @@ section .contentSearch {
             }
             #geoLocButton {
                 display: block;
-                height: 50px;
+                margin: 0 8px;
             }
         }
         .submitCont {
             flex: 1;
-            border: solid;
+            display: flex;
+            align-items: center;
         }
     }
 }
@@ -290,7 +562,7 @@ section .contentSearch {
 /*footer*/
 footer {
 	display:block;
-	background-color: $colorBlue_1;
+	background-color: $footerBg;
 	//border-radius: 20px;
 	padding: 10px 10px 0 10px;
 	width: 100%;
@@ -340,8 +612,8 @@ footer {
 /*Login page*/
 .loginContentPage {
     a {
-    text-decoration:none;
-    color:$colorBlue_2;
+    text-decoration: none;
+    color: $colorBlue_2;
     transition:.5s ease;
     &:hover {
         color:$colorBlue_2-dark;
@@ -355,6 +627,15 @@ footer {
         margin:40px auto;
         border-radius:$br;
         box-shadow:0 4px 10px 4px rgba($colorBlue_1,.2);
+        form {
+            input {
+                margin-bottom: 25px;
+                padding: 8px;
+            }
+            input[type="submit"] {
+                padding: 20px;
+            }
+        }
     }
     
     .tab_group {
@@ -425,7 +706,7 @@ footer {
     }
 
 
-    input, textarea {
+    input {
         font-size:22px;
         display:block;
         width:100%;
@@ -443,22 +724,20 @@ footer {
         }
     }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> d1ed97670097b8546617094a6f692904a57df16d
     input {
         font-size:22px;
         display:block;
-        width:100%;
-        height:100%;
         padding:5px 10px;
         background: $colorBlue_2-light;
-        background-image:none;
         border:1px solid $gray-light;
         color:$white;
-        border-radius:0;
         transition:border-color .25s ease, box-shadow .25s ease;
         &:focus {
-            outline:0;
             border-color:$colorOrange_1;
         }
 
