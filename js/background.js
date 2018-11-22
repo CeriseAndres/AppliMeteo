@@ -16,11 +16,11 @@
 // 	if (today < datePrintemps && today >= dateHiver) {
 		/*hiver*/
 		let myBody = document.querySelector("body");
-		myBody.style.backgroundImage = "url('img/hiver.jpg')";
+		myBody.style.backgroundImage = "url('img/automn.jpg')";
 		myBody.style.backgroundSize = "cover";
 		myBody.style.backgroundRepeat = "no-repeat";
 
-		var SNOW_Picture = "img/snow.gif"  
+		var SNOW_Picture = "img/feuille.gif"  
 		var SNOW_no = 70;  
 
 		var SNOW_browser_IE_NS = (document.body.clientHeight) ? 1 : 0;  

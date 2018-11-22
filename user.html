@@ -26,130 +26,297 @@
                 </ul>
             </nav>
             <div class="headerContent">
-                <div class="headerLogo"><a href="index.html"><img src='img/logo-meteo.png' alt='logo Magic Meteo'></a></div>
-                <div class="headerTitle"><h1>Magic Meteo</h1></div>
+                <a href="index.html"><div class="headerTitle"><img src="img/picto_etoiles.png"><h1>Magic Météo</h1></div></a>
+                <div class="logosRS">
+                    <a href="https://facebook.com" target="_blank"><img src="img/logoFB.png"></a>
+                    <a href="https://twitter.com" target="_blank"><img src="img/logoTwitter.png"></a>
+                    <a href="https://www.instagram.com" target="_blank"><img src="img/logoInsta.png"></a>
+                </div>
             </div>
         </header>
-        <section class="container">
+       <section class="container">
             <div class="contentPage"> 
 <!--                recherche simple-->
 
-                        <div class="contentSearch">
-                            <form>
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Ville, Code Postal, ..." aria-label="Recipient's username" aria-describedby="basic-addon2">
-                                    <div class="input-group-append">
-                                        <input class="btn btn-sm" type="submit" value="check">
-                                    </div>
-                                </div>
-                            </form>
+                <div class="simpleSearch">
+                            <div class ="simpleSearchForm">
+                                <form>
+                                    <label for="simpleSearchInput">Rechercher : </label>
+                                    <input id="simpleSearchInput" type="text" placeholder="Ville, Code postal, ...">
+                                    <input type="submit" value="Ok">
+                                </form>
+                            </div>
+                            
                             <div class="tab_wrapper"> 
                                 <div class="tab">
-                                    <h6 class="card-title">LUNDI</h6>
-                                    <img class="card-img-top" src="img/icons8-soleil-128.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        <p class="card-text"></p>
+                                    <h6 class="tab-title">LUNDI</h6>
+                                    <div class="tab-body">
+                                        <img class="tab-img-top" src="img/icons8-soleil-128.png" alt="icone soleil">
+                                        <p class="tab-text"></p>
                                     </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted"></small>
-                                    </div>
-                                </div>
-                                <div class="tab">
-                                    <h6 class="card-title">MARDI</h6>
-                                    <img class="card-img-top" src="img/icons8-journée-partiellement-nuageuse-128.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        <p class="card-text"></p>
-                                    </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted"></small>
+                                    <div class="tab-footer">
+                                        <span class="tmpMax">35°</span>
+                                        <span class="tmpMin">-18°</span>
                                     </div>
                                 </div>
+                                
                                 <div class="tab">
-                                    <h6 class="card-title">MERCREDI</h6>
-                                    <img class="card-img-top" src="img/icons8-soleil-128.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        
-                                        <p class="card-text"></p>
+                                    <h6 class="tab-title">MARDI</h6>
+                                    <div class="tab-body">
+                                        <img class="tab-img-top" src="img/icons8-journ%C3%A9e-partiellement-nuageuse-128.png" alt="icone soleil">
+                                        <p class="tab-text"></p>
                                     </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted"></small>
+                                    <div class="tab-footer">
+                                        <span class="tmpMax">35°</span>
+                                        <span class="tmpMin">-18°</span>
                                     </div>
                                 </div>
+                                
                                 <div class="tab">
-                                    <h6 class="card-title">JEUDI</h6>
-                                    <img class="card-img-top" src="img/icons8-temps-venteux-100.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        
-                                        <p class="card-text"></p>
+                                    <h6 class="tab-title">MERCREDI</h6>
+                                    <div class="tab-body">
+                                        <img class="tab-img-top" src="img/icons8-soleil-128.png" alt="icone soleil">
+                                        <p class="tab-text"></p>
                                     </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted"></small>
+                                    <div class="tab-footer">
+                                        <span class="tmpMax">35°</span>
+                                        <span class="tmpMin">-18°</span>
                                     </div>
                                 </div>
+                                
                                 <div class="tab">
-                                    <h6 class="card-title">VENDREDI</h6>
-                                    <img class="card-img-top" src="img/icons8-neige-128.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        
-                                        <p class="card-text"></p>
+                                    <h6 class="tab-title">JEUDI</h6>
+                                    <div class="tab-body">
+                                        <img class="tab-img-top" src="img/icons8-temps-venteux-100.png" alt="icone soleil">
+                                        <p class="tab-text"></p>
                                     </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted"></small>
+                                    <div class="tab-footer">
+                                        <span class="tmpMax">35°</span>
+                                        <span class="tmpMin">-18°</span>
                                     </div>
                                 </div>
-                                <div class="tab">
-                                    <h6 class="card-title">SAMEDI</h6>
-                                    <img class="card-img-top" src="img/icons8-neige-128.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        
-                                        <p class="card-text"></p>
+                                
+                                 <div class="tab">
+                                    <h6 class="tab-title">VENDREDI</h6>
+                                    <div class="tab-body">
+                                        <img class="tab-img-top" src="img/icons8-neige-128.png" alt="icone soleil">
+                                        <p class="tab-text"></p>
                                     </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted"></small>
+                                    <div class="tab-footer">
+                                        <span class="tmpMax">35°</span>
+                                        <span class="tmpMin">-18°</span>
                                     </div>
                                 </div>
+                                
                                 <div class="tab">
-                                    <h6 class="card-title">DIMANCHE</h6>
-                                    <img class="card-img-top" src="img/icons8-orage-128.png" alt="Card image cap">
-                                    <div class="card-body">
-                                        
-                                        <p class="card-text"></p>
+                                    <h6 class="tab-title">SAMEDI</h6>
+                                    <div class="tab-body">
+                                        <img class="tab-img-top" src="img/icons8-neige-128.png" alt="icone soleil">
+                                        <p class="tab-text"></p>
                                     </div>
-                                    <div class="card-footer">
-                                        <small class="text-muted"></small>
+                                    <div class="tab-footer">
+                                        <span class="tmpMax">35°</span>
+                                        <span class="tmpMin">-18°</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="tab">
+                                    <h6 class="tab-title">DIMANCHE</h6>
+                                    <div class="tab-body">
+                                        <img class="tab-img-top" src="img/icons8-orage-128.png" alt="icone soleil">
+                                        <p class="tab-text"></p>
+                                    </div>
+                                    <div class="tab-footer">
+                                        <span class="tmpMax">35°</span>
+                                        <span class="tmpMin">-18°</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
                 
+                <div class="simpleSearchDetails">
+                    <div class="detailsHeader">
+                        <h5>LUNDI</h5>
+                    </div>
+                    <div class="detailsWrapper">
+                        <div class="active dayPart">
+                            <h6>Matin</h6>
+                           <div class="icone">
+                               <img src="img/icons8-soleil-128.png">
+                            </div>
+                            <div class="details">
+                                <span>Précipitations : 0% </span>
+                                <span>Gel : 0% </span>
+                                <span>Neige : 0% </span>
+                                <span>Orage : 0% </span>
+                            </div>
+                            <div class="detailsTmp">
+                                <span class="detailsMaxTmp">35°</span>
+                                <span class="detailsMinTmp">22°</span>
+                            </div>
+                        </div>
+                        
+                        <div class="dayPart">
+                            <h6>Après-midi</h6>
+                            <div class="icone">
+                               <img src="img/icons8-nuages-100.png">
+                            </div>
+                            <div class="details">
+                                <span>Précipitations : 20% </span>
+                                <span>Gel : 0% </span>
+                                <span>Neige : 0% </span>
+                                <span>Orage : 0% </span>
+                            </div>
+                            <div class="detailsTmp">
+                                <span class="detailsMaxTmp">25°</span>
+                                <span class="detailsMinTmp">18°</span>
+                            </div>
+                        </div>
+                        <div class="dayPart">
+                            <h6>Soir</h6>
+                            <div class="icone">
+                               <img src="img/icons8-pluie-128.png">
+                            </div>
+                            <div class="details">
+                                <span>Précipitations : 100% </span>
+                                <span>Gel : 0% </span>
+                                <span>Neige : 2% </span>
+                                <span>Orage : 0% </span>
+                            </div>
+                            <div class="detailsTmp">
+                                <span class="detailsMaxTmp">15°</span>
+                                <span class="detailsMinTmp">7°</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
 <!--                recherche sur carte-->
                 <div class="searchMapCont">
                     <div class="searchMap">
-                        <div id='canvasParent'></div>
+                            <img src="img/cartefrancesimple.png">
+                        <div class="dataGridCont">
+                            <div class="dataGrid">
+                                <div class="prevGrid"><img src="img/icons8-pluie-128.png"></div>
+                                <div class="tempGrid">
+                                    <span class="tmpVal">11°</span>
+                                </div>
+                                <div class="windGrid"><img src="img/picto_ventNE.png"><span class="windVal">5km/h</span></div>
+                            </div>
+                            
+                            <div class="dataGrid">
+                                <div class="prevGrid"><img src="img/icons8-orage-128.png"></div>
+                                <div class="tempGrid">
+                                    <span class="tmpVal">9°</span>
+                                </div>
+                                <div class="windGrid"><img src="img/picto_vent.png"><span class="windVal">10km/h</span></div>
+                            </div>
+                            
+                            <div class="dataGrid">
+                                <div class="prevGrid"><img src="img/icons8-nuages-100.png"></div>
+                                <div class="tempGrid"><span class="tmpVal">10°</span></div>
+                                <div class="windGrid"><img src="img/picto_ventSE.png"><span class="windVal">5km/h</span></div>
+                            </div>
+                            
+                            <div class="dataGrid">
+                                <div class="prevGrid"><img src="img/icons8-pluie-128.png"></div>
+                                <div class="tempGrid"><span class="tmpVal">9°</span></div>
+                                <div class="windGrid"><img src="img/picto_ventSE.png"><span class="windVal">12km/h</span></div>
+                            </div>
+                            
+                            <div class="dataGrid">
+                                <div class="prevGrid"><img src="img/icons8-neige-128.png"></div>
+                                <div class="tempGrid"><span class="tmpVal">9°</span></div>
+                                <div class="windGrid"><img src="img/picto_ventSO.png"><span class="windVal">15km/h</span></div>
+                            </div>
+                            
+                            <div class="dataGrid">
+                                <div class="prevGrid"><img src="img/icons8-pluie-128.png"></div>
+                                <div class="tempGrid"><span class="tmpVal">12°</span></div>
+                                <div class="windGrid"><img src="img/picto_ventSO.png"><span class="windVal">10km/h</span></div>
+                            </div>
+                            
+                            <div class="dataGrid">
+                                <div class="prevGrid"><img src="img/icons8-nuages-100.png"></div>
+                                <div class="tempGrid"><span class="tmpVal">16°</span></div>
+                                <div class="windGrid"><img src="img/picto_ventSO.png"><span class="windVal">5km/h</span></div>
+                            </div>
+                            
+                            <div class="dataGrid">
+                                <div class="prevGrid"><img src="img/icons8-soleil-128.png"></div>
+                                <div class="tempGrid"><span class="tmpVal">14°</span></div>
+                                <div class="windGrid"><img src="img/picto_ventSO.png"><span class="windVal">5km/h</span></div>
+                            </div>
+                            
+                            <div class="dataGrid">
+                                <div class="prevGrid"><img src="img/icons8-soleil-128.png"></div>
+                                <div class="tempGrid"><span class="tmpVal">12°</span></div>
+                                <div class="windGrid"><img src="img/picto_ventSE.png"><span class="windVal">5km/h</span></div>
+                            </div>
+                            
+                            <div class="dataGrid">
+                                <div class="prevGrid"><img src="img/icons8-soleil-128.png"></div>
+                                <div class="tempGrid"><span class="tmpVal">13°</span></div>
+                                <div class="windGrid"><img src="img/picto_ventSE.png"><span class="windVal">5km/h</span></div>
+                            </div>
+                            
+                            <div class="dataGrid">
+                                <div class="prevGrid"><img src="img/icons8-journ%C3%A9e-partiellement-nuageuse-128.png"></div>
+                                <div class="tempGrid"><span class="tmpVal">14°</span></div>
+                                <div class="windGrid"><img src="img/picto_vent.png"><span class="windVal">10km/h</span></div>
+                            </div>
+                            
+                            <div class="dataGrid">
+                                <div class="prevGrid"><img src="img/icons8-journ%C3%A9e-partiellement-nuageuse-128.png"></div>
+                                <div class="tempGrid"><span class="tmpVal">15°</span></div>
+                                <div class="windGrid"><img src="img/picto_vent.png"><span class="windVal">12km/h</span></div>
+                            </div>
+                            
+                            <div class="dataGrid">
+                                <div class="prevGrid"><img src="img/icons8-soleil-128.png"></div>
+                                <div class="tempGrid"><span class="tmpVal">18°</span></div>
+                                <div class="windGrid"><img src="img/picto_vent.png"><span class="windVal">5km/h</span></div>
+                            </div>
+                            
+                            <div class="dataGrid">
+                                <div class="prevGrid"><img src="img/icons8-soleil-128.png"></div>
+                                <div class="tempGrid"><span class="tmpVal">24°</span></div>
+                                <div class="windGrid"><img src="img/picto_ventSO.png"><span class="windVal">5km/h</span></div>
+                            </div>
+                            
+                            <div class="dataGrid">
+                                <div class="prevGrid"><img src="img/icons8-soleil-128.png"></div>
+                                <div class="tempGrid"><span class="tmpVal">26°</span></div>
+                                <div class="windGrid"><img src="img/picto_ventSO.png"><span class="windVal">5km/h</span></div>
+                            </div>
+                            
+                            <div class="dataGrid">
+                                <div class="prevGrid"><img src="img/icons8-soleil-128.png"></div>
+                                <div class="tempGrid"><span class="tmpVal">27°</span></div>
+                                <div class="windGrid"><img src="img/picto_vent.png"><span class="windVal">11km/h</span></div>
+                            </div>
+                            
+                        </div>
+                        
                     </div>
 
                     <div class="searchMapForm">
                         <form class="searchMapOptionsForm">
 
                             <div class="dataTypeSearchCont">
-                                <label for="dataTypeOptions">Type de données recherchées</label>
-                                <select id="dataTypeOptions">
-                                    <option>Températures</option>
-                                    <option>Vent</option>
-                                    <option>Pluie</option>
-                                    <option>UV</option>
-                                    <option>Alertes</option>
-                                </select>
+                                <ul id="dataTypeList">
+                                    <li><a id="prevSearch">Prévisions</a></li>
+                                    <li><a id="tempSearch">Températures</a></li>
+                                    <li><a id="windSearch">Vent</a></li>
+                                    <li><a id="rainSearch">Pluie</a></li>
+                                    <li><a id="uvSearch">UV</a></li>
+                                    <li><a id="alertSearch">Alertes</a></li>
+                                </ul>
                             </div>
 
                             <div class="searchCityCont">
-                                <label for="searchCityVal">Recherche par ville/code postal/nom du lieu</label>
-                                <input id="searchCityVal" type="text" name="searchCityVal" placeholder="Ville, code postal, nom">
-                            </div>
-
-                            <div class="searchRegionCont">
-                                <label for="searchRegionVal">Recherche par région</label>
-                                <input id="searchRegionVal" type="text" name="searchRegionVal">
+                                <label for="searchCityVal">Recherche : </label>
+                                <input id="searchCityVal" type="text" name="searchCityVal" placeholder="Région, ville, code postal, nom">
                             </div>
 
                             <div class="searchGeolocCont">
@@ -157,7 +324,7 @@
                                 <span id="geoLocButton">Activer géolocalisation</span>
                             </div>
                             <div class="submitCont">
-                                <input type="submit" value="Go">
+                                <input type="submit" value="Ok">
                             </div>
                         </form>
                     </div> 
@@ -206,30 +373,66 @@
         <footer>
 
             <div class="footerHead">    
-
-                <div class="footerLogo"><img src=""></div>
-                <div class="footerTitle"><h3>Site Meteo</h3></div>
+                
+                <a href="index.html"><div class="footerLogo"><img src="img/picto_etoiles_white.png"><h3>Magic Météo</h3></div></a>
+                <div class="logosRS">
+                    <a href="https://facebook.com" target="_blank"><img src="img/logoFB.png"></a>
+                    <a href="https://twitter.com" target="_blank"><img src="img/logoTwitter.png"></a>
+                    <a href="https://www.instagram.com" target="_blank"><img src="img/logoInsta.png"></a>
+                </div>
             </div>
 
             <div class="footerContent">
-                <div class="footer"></div>
-                <div class="footer"></div>
-                <div class="footer"></div>
+                <div class="footer">
+                    <h5>Météo</h5>
+                    <ul>
+                        <li><a href="">Météo outremer</a></li>
+                        <li><a href="">Météo métropole</a></li>
+                        <li><a href="">Météo monde</a></li>
+                        <li><a href="">Météo des plages</a></li>
+                        <li><a href="">Météo marine</a></li>
+                        <li><a href="">Météo montagne</a></li>
+                        
+                        
+                        
+                    </ul>
+                </div>
+                <div class="footer">
+                    <h5>Ma météo</h5>
+                    <ul>
+                        <li><a href="">Login</a></li>
+                        <li><a href="">Mon espace</a></li>
+                        <li><a href="">Paramétres</li>
+                        <li><a href="">Déconnexion</a></li>
+                        
+                    </ul>
+                </div>
+                <div class="footer">
+                    <h5>A propos de nous</h5>
+                    <ul>
+                        <li><a href="">Contact</a></li>
+                        <li><a href="">Visiteurs</a></li>
+                        <li><a href="">Feedback</a></li>
+                        
+                    </ul>
+                </div>
+                
             </div>
 
 
             <div class="footerFooter">
+
                 <nav class="menuFooter">
                     <ul>
                         <li><a href="">Mentions légales</a></li>
                         <li><a href="">Plan du site</a></li>
                         <li><a href="">Aide</a></li>
                         <li><a href="">Contact</a></li>
+                        <li><a href="">Gestion des cookies</a></li>
+                        <li><a href="">Accessibilité</a></li>
                     </ul>
                 </nav>
             </div>
-
-
         </footer>
         <script type="text/javascript" src="js/background.js"></script>
         <script type="text/javascript" src="js/script.js"></script>
