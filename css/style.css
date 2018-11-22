@@ -1,0 +1,691 @@
+@charset "UTF-8";
+/*palette couleurs*/
+/*navbars*/
+/*polices*/
+/*boutons*/
+/*fond content body*/
+/*bleu font carte*/
+/*footer colors*/
+/*formatage du contenu*/
+/*variables login Content*/
+buttons, input[type=submit], #geoLocButton {
+  border-radius: 5px;
+  background-color: #00aa7f;
+  color: #32324c;
+  padding: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+buttons:hover,
+input[type=submit]:hover,
+#geoLocButton:hover {
+  background-color: #00dda5;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: arial;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+}
+
+/*header*/
+.topNavbar {
+  width: 100%;
+  margin: 0;
+  margin-top: 0;
+}
+.topNavbar ul {
+  background-color: #00557f;
+  padding: 0.7em;
+  margin: 0;
+  display: flex;
+  list-style-type: none;
+  justify-content: flex-end;
+}
+.topNavbar ul li:first-child {
+  margin-right: auto;
+}
+.topNavbar ul li:first-child a {
+  border-left: none;
+  border-right: 1px solid #ccf;
+}
+.topNavbar ul li a:hover {
+  background-color: #0099e5;
+  color: #32324c;
+}
+.topNavbar ul li a {
+  color: #ccf;
+  padding: 10px 20px;
+  margin: 5px 0;
+  border-left: 1px solid #ccf;
+  text-decoration: none;
+}
+.topNavbar ul li form {
+  position: absolute;
+  top: 3.6em;
+  right: 35em;
+  background-color: #00557f;
+  padding: 5px;
+  font-size: 0.7em;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  display: none;
+  color: #ccf;
+}
+.topNavbar ul li form label,
+.topNavbar ul li form input {
+  display: block;
+  margin: 6px 5px;
+}
+.topNavbar ul li form input[type=submit] {
+  position: relative;
+  left: 70%;
+}
+.topNavbar ul li form span {
+  display: block;
+  margin: 5px 0 8px 0;
+  text-align: right;
+}
+.topNavbar ul li form span a {
+  border: 1px solid #ccf;
+  padding: 3px;
+}
+.topNavbar ul li:nth-child(2):hover form {
+  display: block;
+}
+
+/*bannière */
+.headerContent {
+  width: 1300px;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 auto;
+}
+.headerContent .headerTitle h1 {
+  margin: 1.5em 0;
+  font-size: 4em;
+}
+.headerContent .headerLogo img {
+  width: 250px;
+  height: auto;
+  margin: 20px;
+}
+
+/*conteneur principal page*/
+.container {
+  background-color: #eef;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 30px 30px 100px 30px;
+}
+
+/*recherche simple - conteneur principal*/
+.simpleSearch {
+  display: flex;
+  width: 90%;
+  margin: 0 auto 20px auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px #0003;
+}
+.simpleSearch .simpleSearchForm {
+  background-color: #ccf;
+  width: 200px;
+  padding: 10px;
+}
+.simpleSearch .simpleSearchForm form input, .simpleSearch .simpleSearchForm form label {
+  width: 100%;
+  margin: 10px 0;
+}
+.simpleSearch .tab_wrapper {
+  display: flex;
+  width: 100%;
+}
+.simpleSearch .tab_wrapper .tab {
+  flex: 1;
+  background-color: #eee;
+  margin: 0 2px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.simpleSearch .tab_wrapper .tab h6 {
+  display: block;
+  border-bottom: 1px solid #bbb;
+  margin: 0;
+  padding: 3px;
+  text-align: center;
+}
+.simpleSearch .tab_wrapper .tab .tab-body {
+  border-bottom: 1px solid #bbb;
+  padding: 15px;
+}
+.simpleSearch .tab_wrapper .tab .tab-body img {
+  width: 80px;
+  display: block;
+  margin: 0 auto;
+}
+.simpleSearch .tab_wrapper .tab span {
+  display: block;
+  text-align: center;
+  padding: 3px 0;
+}
+.simpleSearch .tab_wrapper .tab .tmpMax {
+  color: red;
+  border-bottom: 1px solid #bbb;
+}
+.simpleSearch .tab_wrapper .tab .tmpMin {
+  color: blue;
+}
+.simpleSearch .tab_wrapper .tab:hover, .simpleSearch .tab_wrapper .active {
+  box-shadow: 0 4px 8px #000a;
+  flex: 1.5;
+}
+
+/*details recherche simple*/
+.simpleSearchDetails {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px #0003;
+  padding: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+.simpleSearchDetails .detailsHeader {
+  display: block;
+}
+.simpleSearchDetails .detailsHeader h5 {
+  padding: 5px 0;
+  margin: 0;
+  font-size: 1.5em;
+}
+.simpleSearchDetails .detailsWrapper {
+  display: flex;
+}
+.simpleSearchDetails .detailsWrapper .dayPart {
+  background-color: #00557f;
+  flex: 20%;
+  margin: 0 2px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.simpleSearchDetails .detailsWrapper .dayPart h6 {
+  text-align: center;
+}
+.simpleSearchDetails .detailsWrapper .dayPart .icone {
+  padding: 10px 0;
+}
+.simpleSearchDetails .detailsWrapper .dayPart .icone img {
+  width: 80px;
+  display: block;
+  margin: 0 auto;
+}
+.simpleSearchDetails .detailsWrapper .dayPart .details {
+  visibility: hidden;
+}
+.simpleSearchDetails .detailsWrapper .dayPart .detailsTmp {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+.simpleSearchDetails .detailsWrapper .dayPart .detailsTmp span {
+  background-color: #fff9;
+  font-weight: bold;
+  padding: 8px;
+  margin: 0 6px;
+  border-radius: 20px;
+}
+.simpleSearchDetails .detailsWrapper .dayPart .detailsTmp .detailsMaxTmp {
+  color: red;
+}
+.simpleSearchDetails .detailsWrapper .dayPart .detailsTmp .detailsMinTmp {
+  color: blue;
+}
+.simpleSearchDetails .detailsWrapper .active {
+  background-color: #00aa7f;
+  flex: 60%;
+  box-shadow: 0 4px 8px #000b;
+}
+.simpleSearchDetails .detailsWrapper .active .icone img {
+  width: 100px;
+}
+.simpleSearchDetails .detailsWrapper .active .details {
+  display: flex;
+  visibility: visible;
+}
+.simpleSearchDetails .detailsWrapper .active .details span {
+  flex: 1;
+  border-bottom: 1px solid #0005;
+  border-top: 1px solid #0005;
+  padding: 6px 0;
+  text-align: center;
+  background-color: #fff2;
+}
+.simpleSearchDetails .detailsWrapper .active .details span:first-child {
+  flex: 1.5;
+}
+.simpleSearchDetails .detailsWrapper .active .details span + span {
+  border-left: 1px solid #0002;
+}
+.simpleSearchDetails .detailsWrapper h6 {
+  padding: 8px 0;
+  margin: 0;
+  background-color: #fffb;
+  border-bottom: 1px solid #000b;
+}
+
+/*Recherche Simple*/
+.tab {
+  border: 1px solid #bc7d00;
+  display: block;
+}
+
+/*recherche sur carte - conteneur principal*/
+.searchMapCont {
+  display: flex;
+  margin: 40px auto;
+  width: 90%;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 2px 2px 10px #0003;
+}
+
+/*formulaire d'options recherche sur carte*/
+.searchMap {
+  overflow: hidden;
+  width: 500px;
+  height: 500px;
+  position: relative;
+  background-color: #cdf;
+}
+.searchMap img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.searchMap .dataGridCont {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: Grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.searchMap .dataGridCont .dataGrid {
+  position: relative;
+}
+.searchMap .dataGridCont .dataGrid .prevGrid img {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: 25px;
+  margin: 0 auto;
+  display: block;
+}
+.searchMap .dataGridCont .dataGrid .tempGrid {
+  display: none;
+}
+.searchMap .dataGridCont .dataGrid .tempGrid .tmpVal {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #66a;
+  margin: 20px auto;
+  display: block;
+  width: 30px;
+  background-color: #fff9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #fff;
+  text-align: center;
+}
+.searchMap .dataGridCont .dataGrid .windGrid {
+  display: none;
+  justify-content: space-around;
+  width: 50%;
+  height: 100%;
+  align-items: center;
+  margin: 0 auto;
+}
+.searchMap .dataGridCont .dataGrid .windGrid img {
+  width: 40px;
+  height: 40px;
+  display: block;
+  position: relative;
+}
+.searchMap .dataGridCont .dataGrid .windGrid .windVal {
+  display: inline-block;
+  position: relative;
+  font-size: 1.2em;
+  color: #00b;
+}
+
+.searchMapForm .searchMapOptionsForm {
+  background-color: #ccf;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+.searchMapForm .searchMapOptionsForm label, .searchMapForm .searchMapOptionsForm input {
+  display: block;
+  width: 100%;
+  padding: 8px;
+}
+.searchMapForm .searchMapOptionsForm .dataTypeSearchCont {
+  display: block;
+  flex: 1;
+}
+.searchMapForm .searchMapOptionsForm .dataTypeSearchCont #dataTypeList {
+  list-style-type: none;
+  padding: 0;
+}
+.searchMapForm .searchMapOptionsForm .dataTypeSearchCont #dataTypeList a {
+  text-decoration: none;
+  color: #ccf;
+  background-color: #00557f;
+  display: block;
+  padding: 8px;
+  cursor: pointer;
+}
+.searchMapForm .searchMapOptionsForm .dataTypeSearchCont #dataTypeList li + li > a {
+  border-top: 1px solid #ccf;
+}
+.searchMapForm .searchMapOptionsForm .dataTypeSearchCont #dataTypeList a:hover {
+  background-color: #0099e5;
+  color: #32324c;
+}
+.searchMapForm .searchMapOptionsForm .searchCityCont {
+  flex: 1;
+  display: block;
+}
+.searchMapForm .searchMapOptionsForm .searchCityCont input {
+  margin: 0 0 5px 0;
+}
+.searchMapForm .searchMapOptionsForm .searchGeolocCont {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.searchMapForm .searchMapOptionsForm .searchGeolocCont img {
+  width: 50px;
+  height: 60px;
+}
+.searchMapForm .searchMapOptionsForm .searchGeolocCont #geoLocButton {
+  display: block;
+  margin: 0 8px;
+}
+.searchMapForm .searchMapOptionsForm .submitCont {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+/*actualités*/
+.actuContainer {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: 200px 200px;
+  grid-gap: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+.actuContainer .actu {
+  position: relative;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px #0003;
+  padding: 8px;
+}
+.actuContainer .actuBig {
+  grid-column: 1/4;
+  grid-row: 1/3;
+  padding: 15px;
+  display: flex;
+}
+.actuContainer .actuBig .actuImg {
+  flex: 1.4;
+  width: 450px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+.actuContainer .actuBig .actuImg img {
+  position: relative;
+  height: 100%;
+  right: calc(100% / 2 - 225px);
+}
+.actuContainer .actuBig .articleExtrait {
+  position: relative;
+  flex: 1;
+  padding: 20px;
+  text-align: justify;
+}
+.actuContainer .actuSmall {
+  grid-column: 4/5;
+}
+.actuContainer .actuSmall .actuImg {
+  height: 100px;
+  width: 200px;
+  overflow: hidden;
+}
+.actuContainer .actuSmall .actuImg img {
+  position: relative;
+}
+
+/*footer*/
+footer {
+  display: block;
+  background-color: #00557f;
+  padding: 10px 10px 0 10px;
+  width: 100%;
+}
+footer .footerContent {
+  display: flex;
+  justify-content: center;
+}
+footer .footerContent .footer {
+  margin: 20px;
+  flex: 30%;
+  height: 200px;
+  background-color: #00aa7f;
+}
+@media (max-width: 600px) {
+  footer .footerContent {
+    flex-direction: column;
+  }
+}
+footer .footerFooter {
+  display: flex;
+  justify-content: center;
+}
+footer .footerFooter ul li {
+  list-style: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 20px;
+}
+footer .footerFooter ul li a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/*Login page*/
+.loginContentPage {
+  /*Design boutons*/
+  /*Appartion/disparition*/
+}
+.loginContentPage a {
+  text-decoration: none;
+  color: #00aa7f;
+  transition: 0.5s ease;
+}
+.loginContentPage a:hover {
+  color: #004433;
+}
+.loginContentPage .form {
+  /*design form*/
+  background: rgba(0, 85, 127, 0.9);
+  padding: 40px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(0, 85, 127, 0.2);
+}
+.loginContentPage .form form input {
+  margin-bottom: 25px;
+  padding: 8px;
+}
+.loginContentPage .form form input[type=submit] {
+  padding: 20px;
+}
+.loginContentPage .tab_group {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 40px 0;
+}
+.loginContentPage .tab_group:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.loginContentPage .tab_group li a {
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  background: rgba(221, 221, 221, 0.25);
+  color: #ddd;
+  font-size: 20px;
+  float: left;
+  width: 50%;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.loginContentPage .tab_group li a:hover {
+  background: #00dda5;
+  color: #ffffff;
+}
+.loginContentPage .tab_group .active a {
+  background: #00aa7f;
+  color: #ffffff;
+}
+.loginContentPage .tab_content > div:last-child {
+  display: none;
+}
+.loginContentPage h1 {
+  text-align: center;
+  color: #ffffff;
+  font-weight: 300;
+  margin: 0 0 40px;
+}
+.loginContentPage label {
+  position: absolute;
+  transform: translateY(6px);
+  left: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.25s ease;
+  -webkit-backface-visibility: hidden;
+  pointer-events: none;
+  font-size: 22px;
+}
+.loginContentPage label .req {
+  margin: 2px;
+  color: #00aa7f;
+}
+.loginContentPage label.active {
+  transform: translateY(50px);
+  left: 2px;
+  font-size: 14px;
+}
+.loginContentPage label.active .req {
+  opacity: 0;
+}
+.loginContentPage input {
+  font-size: 22px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  background: #00dda5;
+  background-image: none;
+  border: 1px solid #ddd;
+  color: #ffffff;
+  border-radius: 0;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.loginContentPage input:focus {
+  outline: 0;
+  border-color: #bc7d00;
+}
+.loginContentPage input {
+  font-size: 22px;
+  display: block;
+  padding: 5px 10px;
+  background: #00dda5;
+  border: 1px solid #ddd;
+  color: #ffffff;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.loginContentPage input:focus {
+  border-color: #bc7d00;
+}
+.loginContentPage input .field_wrap {
+  position: relative;
+  margin-bottom: 40px;
+}
+.loginContentPage .top_row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.loginContentPage .top_row > div {
+  float: left;
+  width: 48%;
+  margin-right: 4%;
+}
+.loginContentPage .top_row > div:last-child {
+  margin: 0;
+}
+.loginContentPage .button {
+  border: 0;
+  outline: none;
+  border-radius: 4px;
+  padding: 15px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  background: #00aa7f;
+  color: #ffffff;
+  transition: all 0.5s ease;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+.loginContentPage .button:hover, .loginContentPage .button:focus {
+  background: #004433;
+}
+.loginContentPage .button_block {
+  display: block;
+  width: 100%;
+}
+.loginContentPage .oubli {
+  margin-top: -20px;
+  text-align: right;
+}
+.loginContentPage #signUp {
+  display: block;
+}
+.loginContentPage #logIn {
+  display: none;
+}
+
+/*# sourceMappingURL=style.css.map */
