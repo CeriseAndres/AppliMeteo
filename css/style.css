@@ -71,6 +71,7 @@ a {
   text-decoration: none;
 }
 .topNavbar ul li form {
+  z-index: 5;
   position: absolute;
   top: 3.6em;
   right: 35em;
