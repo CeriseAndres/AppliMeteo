@@ -132,9 +132,10 @@ a {
 }
 .headerContent .headerTitle h1 {
   margin: 0;
-  font-size: 2.8em;
+  font-size: 4em;
   color: #fff;
   text-shadow: 1px 3px 4px #0009;
+  font-family: "Ranga", cursive !important;
 }
 .headerContent .logosRS {
   display: flex;
@@ -540,6 +541,10 @@ a {
   width: 95%;
   margin: 0 auto;
 }
+.actuContainer h4, .actuContainer h3 {
+  text-align: center;
+  text-decoration: underline;
+}
 .actuContainer .actu {
   position: relative;
   background-color: #fff;
@@ -897,6 +902,7 @@ footer .footerHead {
   justify-content: flex-start;
   margin: 5px auto;
   border: 1px solid #0003;
+  border-radius: 10px;
   border-bottom: none;
   padding: 25px;
   background-image: linear-gradient(#eef5, #00557f);
@@ -904,7 +910,6 @@ footer .footerHead {
 }
 footer .footerHead a .footerLogo {
   display: flex;
-  margin-left: 10px;
   text-decoration: none;
   cursor: pointer;
 }
@@ -914,8 +919,9 @@ footer .footerHead a .footerLogo img {
   margin: 0 10px;
 }
 footer .footerHead a .footerLogo h3 {
+  font-family: "Ranga", cursive !important;
   margin: 0;
-  font-size: 2em;
+  font-size: 3.5em;
   text-shadow: 1px 3px 4px #0009;
   color: #ffffff;
 }
@@ -933,9 +939,10 @@ footer .footerContent {
   padding: 10px 10px 0 10px;
 }
 footer .footerContent .footer {
-  border: 1px solid;
-  border-radius: 5px;
-  box-shadow: 0 3px 5px #0009;
+  border: 10px solid #0001;
+  border-radius: 10px;
+  box-shadow: 5px 5px 0 0 2px #0009;
+  background-image: linear-gradient(to bottom right, #00aa7f, #00557f);
   margin: 20px;
   flex: 30%;
 }
@@ -949,9 +956,13 @@ footer .footerContent .footer ul li {
   padding: 3px;
 }
 footer .footerContent .footer ul li a {
+  font-size: 15px;
   color: inherit;
   text-decoration: none;
   cursor: pointer;
+}
+footer .footerContent .footer ul li a:hover {
+  color: #004433;
 }
 @media (max-width: 600px) {
   footer .footerContent {
@@ -961,19 +972,23 @@ footer .footerContent .footer ul li a {
 footer .footerFooter {
   display: flex;
   justify-content: center;
+  margin: auto;
 }
 footer .footerFooter ul li {
   list-style: none;
   display: inline-block;
-  font-size: 14px;
-  margin: 20px;
+  margin-left: 12px;
 }
 footer .footerFooter ul li a {
+  font-size: 10px;
   color: inherit;
   text-decoration: none;
   display: block;
   padding: 8px;
   cursor: pointer;
+}
+footer .footerFooter ul li a:hover {
+  text-decoration: underline;
 }
 
 /*# sourceMappingURL=style.css.map */
