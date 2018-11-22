@@ -163,12 +163,10 @@ a {
     width: $pageWidth;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     margin:  20px auto;
     border: 1px solid #0003;
     padding: 25px;
-    background-image: url('img/headerBG.png');
-    background-size: cover;
     background-color: #eef5;
         
     .headerTitle {
@@ -223,10 +221,6 @@ a {
     }
     .headerContent {
         width: 95%;
-        
-        .logosRS {
-        }
-        
     }
     
 }
@@ -266,8 +260,8 @@ a {
     }
     .headerContent {
         flex-direction: column;
-        padding: 10px;
-        height: 200px;
+        padding: 5px;
+        height: 150px;
         .headerTitle {
             width: 100%;
             font-size: .8em;
@@ -278,6 +272,8 @@ a {
         }
         .logosRS {
             justify-content: space-around;
+            margin: 0;
+            top : 0;
         }
     }
 }
@@ -687,12 +683,8 @@ a {
         position:relative;
         .actuImg {
             width: 450px;
-            overflow: hidden;
-            border-radius: 5px;
             img {
-                position: relative;
-                height: 100%;
-                right: calc(100% / 2 - 225px);
+                left: -225px;
             }
         }
         .articleExtrait {
@@ -736,22 +728,89 @@ a {
     }
     .actuSmall {
         position: relative;
-        display: inline-block;
+        display: block;
         margin: 20px 0;
+        height: 200px;
         .actuImg {
-            height: 200px;
-            width: 200px;
+            width: 100%;
             overflow: hidden;
-            img {
-                position: relative;
-                height: 200px;
-            }
         }
     }
 }
 }
 
+/*user page*/
+.bookmarks {
+    display: flex;
+    width: 100%;
+    background-color: $navbarsColor;
+    color: $lightFontsColor;
+    font-weight: bold;
+    margin-bottom: 30px;
+    .bookmarksTitle {
+        flex: 20%;
+        padding: 16px;
+        font-size: 18px;
+        color: $darkFontsColor;
+        background-color: $hoverNavbar;
+    }
+    ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+        margin: 0;
+        align-items: center;
+        width: 100%;
+        li {
+            flex: 2;
+            a{
+                padding: 18px;
+                width: 100%;
+                display: block;
+                border-left: 1px solid $navBorderColor;
+                color: $lightFontsColor;
+            }
+            a:hover {
+                background-color: $hoverNavbar;
+                color: $darkFontsColor;
+            }
+            
+    }
+        
+    }
+    
+}
+@media all and (max-width: 1000px) {
+    .bookmarksTitle {
+        display: none;
+    }
+}
 
+@media all and (max-width: 600px) {
+    .bookmarks {
+        flex-direction: column;
+        ul {
+            flex-direction: column;
+            width: 100%;
+            li {
+                width: 100%;
+                a{
+                    padding: 18px;
+                    width: 100%;
+                    display: block;
+                    border-top: 1px solid $navBorderColor;
+                    color: $lightFontsColor;
+                }
+                a:hover {
+                    background-color: $hoverNavbar;
+                    color: $darkFontsColor;
+                }
+
+            }
+        }
+
+    }
+}
 
 /*Login page*/
 .loginContentPage {

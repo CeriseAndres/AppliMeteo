@@ -110,12 +110,10 @@ a {
   width: 1200px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   margin: 20px auto;
   border: 1px solid #0003;
   padding: 25px;
-  background-image: url("img/headerBG.png");
-  background-size: cover;
   background-color: #eef5;
 }
 .headerContent .headerTitle {
@@ -201,8 +199,8 @@ a {
 
   .headerContent {
     flex-direction: column;
-    padding: 10px;
-    height: 200px;
+    padding: 5px;
+    height: 150px;
   }
   .headerContent .headerTitle {
     width: 100%;
@@ -214,6 +212,8 @@ a {
   }
   .headerContent .logosRS {
     justify-content: space-around;
+    margin: 0;
+    top: 0;
   }
 }
 /*recherche simple - conteneur principal*/
@@ -593,13 +593,9 @@ a {
   }
   .actuContainer .actuBig .actuImg {
     width: 450px;
-    overflow: hidden;
-    border-radius: 5px;
   }
   .actuContainer .actuBig .actuImg img {
-    position: relative;
-    height: 100%;
-    right: calc(100% / 2 - 225px);
+    left: -225px;
   }
   .actuContainer .actuBig .articleExtrait {
     position: relative;
@@ -641,17 +637,80 @@ a {
   }
   .actuContainer .actuSmall {
     position: relative;
-    display: inline-block;
+    display: block;
     margin: 20px 0;
+    height: 200px;
   }
   .actuContainer .actuSmall .actuImg {
-    height: 200px;
-    width: 200px;
+    width: 100%;
     overflow: hidden;
   }
-  .actuContainer .actuSmall .actuImg img {
-    position: relative;
-    height: 200px;
+}
+/*user page*/
+.bookmarks {
+  display: flex;
+  width: 100%;
+  background-color: #00557f;
+  color: #ccf;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.bookmarks .bookmarksTitle {
+  flex: 20%;
+  padding: 16px;
+  font-size: 18px;
+  color: #32324c;
+  background-color: #0099e5;
+}
+.bookmarks ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  margin: 0;
+  align-items: center;
+  width: 100%;
+}
+.bookmarks ul li {
+  flex: 2;
+}
+.bookmarks ul li a {
+  padding: 18px;
+  width: 100%;
+  display: block;
+  border-left: 1px solid #ccf;
+  color: #ccf;
+}
+.bookmarks ul li a:hover {
+  background-color: #0099e5;
+  color: #32324c;
+}
+
+@media all and (max-width: 1000px) {
+  .bookmarksTitle {
+    display: none;
+  }
+}
+@media all and (max-width: 600px) {
+  .bookmarks {
+    flex-direction: column;
+  }
+  .bookmarks ul {
+    flex-direction: column;
+    width: 100%;
+  }
+  .bookmarks ul li {
+    width: 100%;
+  }
+  .bookmarks ul li a {
+    padding: 18px;
+    width: 100%;
+    display: block;
+    border-top: 1px solid #ccf;
+    color: #ccf;
+  }
+  .bookmarks ul li a:hover {
+    background-color: #0099e5;
+    color: #32324c;
   }
 }
 /*Login page*/
