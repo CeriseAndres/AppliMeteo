@@ -802,15 +802,26 @@ footer {
         background-image: linear-gradient(#eef5, $footerBg);
         background-color: #eef5;
         a {
+            .footerLogo {
+            display: flex;
+            margin-left: 10px;
             text-decoration: none;
             cursor: pointer;
-            h3 {
-                margin: 0;
-                font-size: 2em;
-                text-shadow: 1px 3px 4px #0009;
-                color: $white;
+                img {
+                    width: 60px;
+                    height: 60px;
+                    margin: 0 10px;
+                }
+                h3 {
+
+                    margin: 0;
+                    font-size: 2em;
+                    text-shadow: 1px 3px 4px #0009;
+                    color: $white;
+                }
             }
         }
+        
         .logosRS {
             margin-left: auto;
             position: relative;
