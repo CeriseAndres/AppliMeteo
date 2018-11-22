@@ -881,8 +881,11 @@ footer {
     .footerFooter {
         display: flex;
         justify-content: center;
+        margin: auto;
+
         ul {
             li {
+                 border: 1px solid;
                 list-style: none;
                 display: inline-block;
                 
