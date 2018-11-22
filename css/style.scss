@@ -424,9 +424,6 @@ footer {
         }
     }
 
-    label.highlight {
-        color:$white;
-    }
 
     input, textarea {
         font-size:22px;
@@ -446,13 +443,9 @@ footer {
         }
     }
 
-    textarea {
-      border:2px solid $gray-light;
-      resize: vertical;
-    }
 
 
-    input, textarea {
+    input {
         font-size:22px;
         display:block;
         width:100%;

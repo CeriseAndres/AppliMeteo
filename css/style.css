@@ -355,9 +355,6 @@ footer .footerFooter ul li a {
 .loginContentPage label.active .req {
   opacity: 0;
 }
-.loginContentPage label.highlight {
-  color: #ffffff;
-}
 .loginContentPage input, .loginContentPage textarea {
   font-size: 22px;
   display: block;
@@ -375,11 +372,7 @@ footer .footerFooter ul li a {
   outline: 0;
   border-color: #bc7d00;
 }
-.loginContentPage textarea {
-  border: 2px solid #a0b3b0;
-  resize: vertical;
-}
-.loginContentPage input, .loginContentPage textarea {
+.loginContentPage input {
   font-size: 22px;
   display: block;
   width: 100%;
@@ -392,11 +385,11 @@ footer .footerFooter ul li a {
   border-radius: 0;
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
-.loginContentPage input:focus, .loginContentPage textarea:focus {
+.loginContentPage input:focus {
   outline: 0;
   border-color: #bc7d00;
 }
-.loginContentPage input .field_wrap, .loginContentPage textarea .field_wrap {
+.loginContentPage input .field_wrap {
   position: relative;
   margin-bottom: 40px;
 }
