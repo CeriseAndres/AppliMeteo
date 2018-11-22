@@ -75,12 +75,15 @@ input[type="submit"]:hover,
     font-family: arial;
     font-size: 16px;
 }
+
 body {
     margin: 0;
 }
+
 a {
     text-decoration: none;
 }
+
 /*header*/
 .topNavbar{
     width: 100%;
@@ -99,8 +102,6 @@ a {
                 border-left: none;
                 border-right: 1px solid $navBorderColor;
             }
-            
-
         }
         li {
             a:hover {
@@ -750,55 +751,7 @@ a {
 }
 }
 
-/*footer*/
-footer {
-	display:block;
-	background-color: $footerBg;
-	//border-radius: 20px;
-	padding: 10px 10px 0 10px;
-	width: 100%;
 
-	.footerHead {
-
-	}
-	.footerContent {
-		display: flex;
-		justify-content: center;
-
-		.footer {
-			margin: 20px;
-			
-			flex: 30%;
-			height: 200px;
-			background-color: $colorBlue_2;
-			
-		}
-	}
-	@media (max-width: 600px) {
-		.footerContent {
-			flex-direction: column;
-		}
-	}
-
-
-	.footerFooter {
-		display: flex;
-		justify-content: center;
-		ul {
-			li {
-				list-style: none;
-				display: inline-block;
-	        	
-				font-size: 14px;
-	    		margin: 20px;
-				a {
-					color: inherit; 
-	    			text-decoration: none;
-				}
-			}
-		}
-	}
-}
 
 /*Login page*/
 .loginContentPage {
@@ -985,4 +938,124 @@ footer {
         display: none;
     }
     
+}
+
+/*footer*/
+footer {
+    display:block;
+    background-color: $footerBg;
+    padding: 10px 10px 0 10px;
+    width: 100%;
+    color: $white;
+
+    
+    
+
+
+    .footerHead {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin:  5px auto;
+        border: 1px solid #0003;
+        border-bottom: none;
+        padding: 25px;
+        background-image: linear-gradient(#eef5, $footerBg);
+        background-color: #eef5;
+        a {
+            .footerLogo {
+            display: flex;
+            margin-left: 10px;
+            text-decoration: none;
+            cursor: pointer;
+                img {
+                    width: 60px;
+                    height: 60px;
+                    margin: 0 10px;
+                }
+                h3 {
+
+                    margin: 0;
+                    font-size: 2em;
+                    text-shadow: 1px 3px 4px #0009;
+                    color: $white;
+                }
+            }
+        }
+        
+        .logosRS {
+            margin-left: auto;
+            position: relative;
+            
+            
+            img {
+                width: 35px;
+                height: 35px;
+                margin: 0 10px;
+            }
+           
+        }
+
+    }
+    .footerContent {
+ 
+        display: flex;
+        padding: 10px 10px 0 10px;
+
+        .footer {
+            border: 1px solid;
+            border-radius: 5px;
+            box-shadow: 0 3px 5px #0009;
+
+            margin: 20px;
+            flex: 30%;
+            h5 {
+                margin: 8px;
+                font-size: 1.5em;
+                text-shadow: 1px 3px 4px #0009;
+            }   
+        
+            ul {
+                li {
+                    
+                    list-style: none;
+                    padding: 3px;
+
+                    a {
+                        color: inherit; 
+                        text-decoration: none;
+                        cursor: pointer;
+
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 600px) {
+        .footerContent {
+            flex-direction: column;
+        }
+    }
+
+
+    .footerFooter {
+        display: flex;
+        justify-content: center;
+        ul {
+            li {
+                list-style: none;
+                display: inline-block;
+                
+                font-size: 14px;
+                margin: 20px;
+                a {
+                    color: inherit; 
+                    text-decoration: none;
+                    display: block;
+                    padding: 8px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
 }
