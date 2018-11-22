@@ -540,6 +540,13 @@ footer .footerFooter ul li a {
   border-radius: 4px;
   box-shadow: 0 4px 10px 4px rgba(0, 85, 127, 0.2);
 }
+.loginContentPage .form form input {
+  margin-bottom: 25px;
+  padding: 8px;
+}
+.loginContentPage .form form input[type=submit] {
+  padding: 20px;
+}
 .loginContentPage .tab_group {
   list-style: none;
   padding: 0;
@@ -602,10 +609,7 @@ footer .footerFooter ul li a {
 .loginContentPage label.active .req {
   opacity: 0;
 }
-.loginContentPage label.highlight {
-  color: #ffffff;
-}
-.loginContentPage input, .loginContentPage textarea {
+.loginContentPage input {
   font-size: 22px;
   display: block;
   width: 100%;
@@ -618,32 +622,23 @@ footer .footerFooter ul li a {
   border-radius: 0;
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
-.loginContentPage input:focus, .loginContentPage textarea:focus {
+.loginContentPage input:focus {
   outline: 0;
   border-color: #bc7d00;
 }
-.loginContentPage textarea {
-  border: 2px solid #ddd;
-  resize: vertical;
-}
-.loginContentPage input, .loginContentPage textarea {
+.loginContentPage input {
   font-size: 22px;
   display: block;
-  width: 100%;
-  height: 100%;
   padding: 5px 10px;
   background: #00dda5;
-  background-image: none;
-  border: 1px solid #a0b3b0;
+  border: 1px solid #ddd;
   color: #ffffff;
-  border-radius: 0;
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
-.loginContentPage input:focus, .loginContentPage textarea:focus {
-  outline: 0;
+.loginContentPage input:focus {
   border-color: #bc7d00;
 }
-.loginContentPage input .field_wrap, .loginContentPage textarea .field_wrap {
+.loginContentPage input .field_wrap {
   position: relative;
   margin-bottom: 40px;
 }
