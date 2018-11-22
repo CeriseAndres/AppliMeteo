@@ -21,7 +21,7 @@
 		myBody.style.backgroundRepeat = "no-repeat";
 
 		var SNOW_Picture = "img/feuille.gif"  
-		var SNOW_no = 70;  
+		var SNOW_no = 40;  
 
 		var SNOW_browser_IE_NS = (document.body.clientHeight) ? 1 : 0;  
 		var SNOW_browser_MOZ = (self.innerWidth) ? 1 : 0;  
