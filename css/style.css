@@ -34,6 +34,10 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 /*header*/
 .topNavbar {
   width: 100%;
@@ -102,19 +106,46 @@ body {
 
 /*bannière */
 .headerContent {
-  width: 1300px;
+  width: 1200px;
   display: flex;
+  align-items: center;
   justify-content: flex-start;
-  margin: 0 auto;
+  margin: 20px auto;
+  border: 1px solid #0003;
+  padding: 25px;
+  background-image: url("img/headerBG.png");
+  background-size: cover;
+  background-color: #eef5;
+}
+.headerContent .headerTitle {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff7;
+  border-radius: 6px;
+  border: 1px solid #0003;
+}
+.headerContent .headerTitle img {
+  width: 60px;
+  height: 60px;
+  margin: 0 10px;
 }
 .headerContent .headerTitle h1 {
-  margin: 1.5em 0;
-  font-size: 4em;
+  margin: 0;
+  font-size: 2.8em;
+  color: #fff;
+  text-shadow: 1px 3px 4px #0009;
 }
-.headerContent .headerLogo img {
-  width: 250px;
-  height: auto;
-  margin: 20px;
+.headerContent .logosRS {
+  margin-left: auto;
+  position: relative;
+  top: 2em;
+}
+.headerContent .logosRS img {
+  width: 35px;
+  height: 35px;
+  margin: 0 10px;
 }
 
 /*conteneur principal page*/
