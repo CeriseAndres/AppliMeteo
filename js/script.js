@@ -1,7 +1,7 @@
 /*selection des onglets par jours (recherche simple)*/
 let searchTabs = document.getElementsByClassName("tab");
 let detailsTitle = document.querySelector(".detailsHeader>h5");
-let date = new Date();
+//passer en classe active les onglets sur lesquels on clique :
 for (let tab of searchTabs) {
     tab.onclick = function(){
         for (let tab of searchTabs) {
@@ -12,6 +12,7 @@ for (let tab of searchTabs) {
     }
 }
 
+//même chose pour les onglets d'affichage des détails du jour
 let dayParts = document.getElementsByClassName("dayPart");
 for (let part of dayParts) {
     part.onclick = function() {
@@ -32,6 +33,7 @@ let prevDataArray = document.getElementsByClassName("prevGrid");
 let tempDataArray = document.getElementsByClassName("tempGrid");
 let windDataArray = document.getElementsByClassName("windGrid");
 
+//pour l'onglet prévisions
 prevSearchTab.onclick = function() {
     for (prevData of prevDataArray) {
         prevData.style.display = "block";
@@ -44,6 +46,7 @@ prevSearchTab.onclick = function() {
     }
 }
 
+//pour l'onglet températures
 tempSearchTab.onclick = function() {
     for (tempData of tempDataArray) {
         tempData.style.display = "block";
@@ -55,6 +58,7 @@ tempSearchTab.onclick = function() {
         }
     }
 }
+
 /*couleur polices temérature en fonction de la valeur*/
 let tmpVals = document.getElementsByClassName("tmpVal");
 for (tmpVal of tmpVals) {
@@ -67,6 +71,7 @@ for (tmpVal of tmpVals) {
     }
 }
 
+//pour l'onglet vents
 windSearchTab.onclick = function() {
     for (windData of windDataArray) {
         windData.style.display = "flex";
